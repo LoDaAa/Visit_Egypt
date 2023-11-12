@@ -1,0 +1,41 @@
+header
+{
+  margin-bottom: 30px;
+  min-height: 130px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/photo-1431629087622-72b063a59b19?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGVzZXJ0JTIwc2FuZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80);
+} 
+
+mat-expansion-panel-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+mat-panel-title
+{
+  flex-grow: 100;
+}
+mat-panel-title, mat-panel-description{
+  font-size: 1.25em;
+  color: #00838f;
+  font-weight: 500;
+}
+.btn2{
+  border: 1px solid beige;
+  padding: 10px 30px;
+  text-decoration: none;
+  transition: 0.6s ease;
+  font-size: 15px;
+  background-size: 200%;
+  transition: .5s ease-out;
+}
+
+.btn2:hover{
+  border: 1px solid beige;
+  color: black !important;
+  background-color: beige;
+}

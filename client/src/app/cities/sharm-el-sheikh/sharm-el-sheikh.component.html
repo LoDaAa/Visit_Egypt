@@ -1,0 +1,277 @@
+<app-header></app-header>
+
+<header>
+  
+    <div class="banner">
+      <div class="container2">
+        <h2 class="text1"> Sharm El-Sheikh </h2>
+      </div>
+      <div class="button">
+        <a class="btn2">
+         Explore Places To Visit In Sharm El-Sheikh 
+       </a>
+     </div>
+     </div>
+    
+      <!-- Slider -->
+    
+      <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'" [interval]='3000' style=" width:100% !important; height: 500px !important;">
+        <mdb-carousel-item>
+          <div class="view" style=" width:100% !important; height: 800px !important;">
+          <img class="d-block w-100" src="assets/images/Sharm/sharmBack.jpeg" alt="Second slide">
+          <div class="mask rgba-black-light"></div>
+          </div>
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <div class="view" style=" width:100% !important; height: 800px !important;">
+          <img class="d-block w-100" src="assets/images/Sharm/sharmBack2.jpeg" alt="Third slide">
+          <div class="mask rgba-black-light"></div>
+          </div>
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <div class="view" style=" width:100% !important; height: 800px !important;">
+          <img class="d-block w-100" src="assets/images/Sharm/sharmBack3.jpeg" alt="Third slide">
+          <div class="mask rgba-black-light"></div>
+          </div>
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <div class="view" style=" width:100% !important; height: 800px !important;">
+          <img class="d-block w-100" src="assets/images/Sharm/sharmBack4.jpeg" alt="Third slide">
+          <div class="mask rgba-black-light"></div>
+          </div>
+        </mdb-carousel-item>
+       
+      </mdb-carousel>
+    
+    </header>
+
+    <div class="places">
+
+      <h1> <span> Places To Go In Sharm El-Sheikh </span></h1>
+
+      <div class="float-container">
+        <div class="float-child" style="margin-top: 90px;">
+          <img src="assets/images/Sharm/rasMohamed.jpeg"  #image1  alt="Ras Mohammed National Park" style="border-radius: 25px; width: 100%;" (click) = zoomIn(image1)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child" style="margin-top: -50px;">
+          <div class="text">
+            <h1> Ras Mohammed National Park </h1>
+            <p>
+              Ras Mohammed National Park is what put Sharm el-Sheikh on the tourist map.
+              <br><br>
+              Surrounded by some of the world's most incredible dive sites, this peninsula, 38 kilometers south of Sharm, is home to glorious beaches with excellent snorkeling just offshore, the world's second most northerly <strong> mangrove forest</strong> , and a <strong> saltwater lake. </strong>
+              <br><br>
+              While diving trips concentrate on the offshore reefs, land-based day trips to Ras Mohammed explore the peninsula's desert environment and its beaches with swim and snorkel stops along the way.
+              <br><br>
+              The best beaches are <strong> Old Quay Beach </strong> (with its top-notch coral reef easily reached from the shore) and Aqaba Beach.
+              <br><br>
+              Travelers seeking a good view should head to the <strong> Shark Observatory cliff  </strong> top right on the southern edge of Ras Mohammed, where views stretch across both sides of the Red Sea.
+              </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-container1">
+        <div class="float-child1">
+          <img src="assets/images/Sharm/shipwreck.jpeg" #image2  alt="Thistlegorm Wreck" style="border-radius: 25px; width: 100%;" (click) = zoomIn(image2)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child1" style="margin-right: 30px; margin-top: 20px;">
+          <div class="text2">
+            <h1> Thistlegorm Wreck </h1>
+            <p>
+              For many advanced divers, a trip to Sharm el-Sheikh means only one thing: diving the Thistlegorm.
+              <br><br>
+             <strong> One of the top wreck dives in the world </strong> , this ship packed full of cargo to resupply British troops was sunk during World War II by German bombers.
+              <br><br>
+              Fish now flit through its rooms and cargo holds filled with jeeps, motorbikes, and armaments that never made it to the front.
+              <br><br>
+              The wreck is situated in the Straits of Gubal, off the western coast of the Sinai Peninsula, so diving trips are offered as overnight liveaboard tours.
+              <br><br>
+              These dive tours generally include at least two dives of the Thistlegorm wreck, plus dives at the Dunraven wreck (or one of Ras Mohammed's dive sites) along the way. Many also include night dive opportunities at the Thistlegorm site.
+              </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-container2">
+        <div class="float-child2">
+          <img src="assets/images/Sharm/jolanda.jpeg" #image3 alt="Jolanda Reef Site" style="border-radius: 25px; width: 95%;" (click) = zoomIn(image3)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child2" style="margin-top: 70px;">
+          <div class="text2">
+            <h1> Jolanda Reef Site </h1>
+            <p>
+              Jolanda Reef (also called Yolanda Reef) is <strong> one of the most popular dive sites </strong> in the Ras Mohammed Marine Park area.
+              <br><br>
+              Dive trips here (accessed by boat from Sharm el-Sheikh) usually include Shark Reef, as well making this a two-for-one deal with a kaleidoscope of fish life and corals to be seen.
+              <br><br>
+              Jolanda Reef is home to the wreck of the Jolanda, an old Cypriot freighter ship that had been carrying a cargo of bathroom porcelain when it ran aground on the reef in 1980.
+              <br><br>
+              As well as the highlight of exploring the wreck site, the steep, rainbow colored coral walls of Shark Reef that lead to the wreck, and Jolanda Reef's coral garden plateau, are prime sealife spotting destinations.
+              <br><br>
+              Scorpionfish, crocodilefish, turtles, moray eels, and barracuda are all regularly spotted by divers here.
+              </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="float-container1">
+        <div class="float-child1" style="margin-top: 180px !important;">
+          <img src="assets/images/Sharm/saint.jpeg" #image4 alt="Saint Catherine's Monastery" style="border-radius: 25px; width: 100%;" (click) = zoomIn(image4)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child1" style="margin-right: 30px;">
+          <div class="text2">
+            <h1> Saint Catherine's Monastery </h1>
+            <p>
+              The Sinai Peninsula's top historical destination, St. Catherine's Monastery sits at the foot of <Strong> Mt. Sinai  </Strong> , where Moses is said to have received the Ten Commandments.
+              <br><br>
+              One of the oldest working monasteries in the world, this Greek Orthodox hermitage is home to the famous "burning bush" of the Old Testament, as well as a museum showcasing some of the monastery's glittering collection of religious icons and ancient manuscripts that is revered as one of the finest in the world.
+              <br><br>
+              The monastery is 209 kilometers northwest from Sharm el-Sheikh, within the Sinai's barren mountainous interior. Group tours from Sharm are offered both as overnight trips, including the hike up Mt. Sinai for sunrise, and as early morning departures to just visit the monastery.
+             </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-container2">
+        <div class="float-child2">
+          <img src="assets/images/Sharm/sinai.jpeg" #image5 alt="Climb Mt. Sinai" style="border-radius: 25px; width: 95%;" (click) = zoomIn(image5)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child2" style="margin-top: 75px;">
+          <div class="text2">
+            <h1> Climb Mt. Sinai  </h1>
+            <p>
+              Inland from the sun-drenched beaches of the coast, the Sinai's rugged, mountainous heart is rawly beautiful.
+              <br><br>
+              For a taster of this craggy landscape, head 209 kilometers inland from Sharm el-Sheikh to hike up to the summit of Mt. Sinai to see an expanse of orange-hued peaks rippling out before you.
+              <br><br>
+              Revered by all three of the major monotheistic faiths as the place where Moses received the 10 Commandments, the summit hike is a pilgrimage for many people (and usually combined with a visit to <strong> St. Catherine's Monastery </strong>  which sits at the trailhead for the hike).
+              <br><br>
+              There are two main trails up to the top. The Camel Trail is a well-worn switchback path, while the Steps of Repentance is a more difficult, but much more scenic, set of stone-cut staircases that was carved out by one of the monastery's monks.
+              <br><br>
+              From Sharm el-Sheikh, most tours travel overnight to reach the trailhead in the wee hours of the morning so that the hike up the Camel Trail is completed in the cool, dark hours, and the summit is reached in time to watch sunrise over the surrounding peaks.
+              </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-container1">
+        <div class="float-child1">
+          <img src="assets/images/Sharm/dunraven.jpeg" #image6 alt="Dunraven Site" style="border-radius: 25px; width: 90%; margin-top: 80px; margin-left: 30px;" (click) = zoomIn(image6)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child1">
+          <div class="text2">
+            <h1> Dunraven Site </h1>
+            <p>
+              The SS Dunraven had been traveling from Mumbai (then Bombay) back to the UK, when it hit the reef and sunk just off the tip of the Sinai Peninsula in 1876.
+              <br><br>
+              Today, this 80-meter steam ship, torn in two pieces on the sea floor, is home to a rich variety of fish, which have made their home within the barnacle-encrusted hull.
+              <br><br>
+              Divers here regularly spot big schools of colorful reef fish with cardinalfish, goatfish, scorpionfish, and pipefish all patroling the area.
+              <br><br>
+              The boat trip to the dive site takes two hours from Sharm eI-Sheikh, so the Dunraven is often combined as either a day trip with one of the dive sites in the Ras Mohammed Marine Park area or as a stop along the way on an overnight liveaboard trip to dive the Thistlegorm wreck.
+              </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-container2">
+        <div class="float-child2">
+          <img src="assets/images/Sharm/canyon.jpeg" #image7 alt="Colored Canyon" style="border-radius: 25px; width: 90%;" (click) = zoomIn(image7)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child2" style="margin-top: 70px;">
+          <div class="text2">
+            <h1> Colored Canyon </h1>
+            <p>
+              The swirling mineral-rich layered rock formations of the aptly named Colored Canyon are one of the Sinai's top out-of-the-water natural attractions.
+              <br><br>
+              The canyon, 177 kilometers north from Sharm el-Sheikh, is a showcase of the natural beauty of the desert, carved out of by millennia of wind and water whittling away the rock. There are plenty of opportunities for visitors to scramble along the canyon path accessing the rose-pink striped interior of the rock face.
+              <br><br>
+              For nature lovers, this is one of Sharm el-Sheikh's top days out, and exploring the bizarrely shaped pinnacles and boulders, which have been brushed with shimmering red and orange hues offers up some fantastic photography opportunities.
+              <br><br>
+              Wear walking shoes with a decent tread if you want to visit, and bring along plenty of water.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-container1">
+        <div class="float-child1">
+          <img src="assets/images/Sharm/blueHole.png" #image8 alt="The Blue Hole" style="border-radius: 25px; width: 90%; margin-top: 80px; margin-left: 30px;" (click) = zoomIn(image8)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child1">
+          <div class="text2">
+            <h1>The Blue Hole</h1>
+            <p>
+              The Sinai's most notorious dive site is the Blue Hole, just north of Dahab and 100 kilometers north from Sharm el-Sheikh.
+              <br><br>
+              This sinkhole's infamy is due to the number of lives it has claimed, but all the deaths that have happened here are due to divers diving beyond the normal recreation diving limits. Despite the site's reputation for danger, divers who stick within sensible limits are perfectly safe here, and the fish life and incredible vistas of ethereal blue below make this an incredibly beautiful dive.
+              <br><br>
+              As the Blue Hole can be accessed from the shore, it's also a popular snorkeling spot, with plenty of fish life to see flitting near the surface if you don't fancy heading into the depths.
+              </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>
+      <div class="footerStuff">
+  
+        <div class="footerItem">
+         <a href="https://egymonuments.gov.eg" target="_blank"> Ministry of Tourism Egypt  </a> 
+         |
+         <a style="cursor: text; color: white;"> Zamalek head office 3 El Adel Abou Bakr St., Zamalek , Cairo </a> 
+         |
+         <a href="https://egymonuments.gov.eg" target="_blank"> egymonuments.gov.eg  </a> 
+        </div>
+  
+        <div class="social-icons">
+          <a class="social-icon social-icon--facebook" href="https://www.facebook.com/khaled.wbas.56" target="_blank">
+            <i class="fa fa-facebook"></i>
+            <div class="tooltip">Facebook</div>
+          </a>
+          <a class="social-icon social-icon--twitter" href="https://twitter.com/khaled_garawin" target="_blank">
+            <i class="fa fa-twitter"></i>
+            <div class="tooltip">Twitter</div>
+          </a>
+          <a class="social-icon social-icon--github" href="https://github.com/LoDaAa" target="_blank">
+            <i class="fa fa-github"></i>
+            <div class="tooltip">Github</div>
+          </a>
+          <a class="social-icon social-icon--instagram" href="https://www.instagram.com/khldwleedd/" target="_blank">
+            <i class="fa fa-instagram"></i>
+            <div class="tooltip">Instagram</div>
+          </a>
+          <a class="social-icon social-icon--linkedin" href="https://www.linkedin.com/in/khaled-garaween-557181169/" target="_blank">
+            <i class="fa fa-linkedin"></i>
+            <div class="tooltip">LinkedIn</div>
+          </a>
+        </div>
+        
+      </div>
+  </footer>

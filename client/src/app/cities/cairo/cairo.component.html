@@ -1,0 +1,242 @@
+<app-header></app-header>
+
+<header>
+  
+    <div class="banner" >
+      <div class="container2">
+        <h2 class="text1" data-aos="fade-down"> Cairo</h2>
+      </div>
+      <div class="button" >
+      <a class="btn2">
+       Explore Places To Visit In Cairo
+     </a>
+   </div>
+     </div>
+    
+      <!-- Slider -->
+    
+      <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'" [interval]='3000' style=" width:100% !important; height: 500px !important;">
+        <mdb-carousel-item>
+          <div class="view" style=" width:100% !important; height: 800px !important;">
+          <img class="d-block w-100" src="assets/images/Cairo/cairoBackground.jpeg" alt="Second slide">
+          <div class="mask rgba-black-light"></div>
+          </div>
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <div class="view" style=" width:100% !important; height: 800px !important;">
+          <img class="d-block w-100" src="assets/images/Cairo/cairo3.jpeg" alt="Third slide">
+          <div class="mask rgba-black-light"></div>
+          </div>
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <div class="view" style=" width:100% !important; height: 800px !important;">
+          <img class="d-block w-100" src="assets/images/Cairo/cairo4.jpg" alt="Third slide">
+          <div class="mask rgba-black-light"></div>
+          </div>
+        </mdb-carousel-item>
+       
+      </mdb-carousel>
+    
+    </header>
+
+    <div class="places"> 
+
+      <div class="hdText">
+        <h1> <span> Places To Go In Cairo </span></h1>
+      </div>
+
+      <div class="float-container" [@rowsAnimation]="">
+        <div class="float-child" style="margin-top: 90px;">
+          <img id="myImg" src="assets/images/Cairo/pyramidsPlace.jpeg" alt="" #image style="border-radius: 25px;" (click) = zoomIn(image)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child" style="margin-top: -50px;">
+          <div class="text">
+            <h1> Pyramids</h1>
+            <p>
+              <strong> The Pyramid of Cheops </strong> (also called the Great Pyramid or Pyramid of Khufu) is the largest pyramid of the Giza group, and its interior of narrow passages can be explored, although there isn't much to see, except a plain tomb chamber with an empty sarcophagus.
+              <br><br>
+              Directly behind the Great Pyramid is the <strong> Solar Boat Museum </strong>, which displays one of the ceremonial solar barques unearthed in the area that has been painstakingly restored to its original glory.
+              <br><br>
+              Farther south on the plateau is the <strong> Pyramid of Chephren </strong> (also known as the Pyramid of Khefre), with an internal tunnel area, which can be entered, and the smaller <strong> Pyramid of Mycerinus </strong> (Pyramid of Menkaure).
+              <br><br>
+              Guarding these mortuary temples is the lion-bodied and pharaoh-faced <strong> Sphinx; </strong> one of the ancient world's iconic monuments.
+              <br><br>
+              The Giza Plateau is set to welcome another attraction when the <strong> Grand Egyptian Museum (GEM) </strong> is finally finished
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-container1">
+        <div class="float-child1" >
+          <img src="assets/images/Cairo/museum.jpeg" #image2 alt="" style="border-radius: 25px;"(click) = zoomIn(image2)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img02">
+        </div>
+        </div>
+        <div class="float-child1" style="margin-right: 30px; margin-top: 20px;" >
+          <div class="text2">
+            <h1> Egyptian Museum</h1>
+            <p>
+              The Egyptian Museum is the oldest archaeological museum in the Middle East, and houses <strong> the largest collection of Pharaonic antiquities in the world. </strong> The museum displays an extensive collection spanning from the Predynastic Period to the Greco-Roman Era.
+              <br><br>
+              The architect of the building was selected through an international competition in 1895, which was the first of its kind, and was won by the French architect, Marcel Dourgnon. The museum was inaugurated in 1902 by Khedive Abbas Helmy II, and has become a historic landmark in downtown Cairo, and home to some of the world’s most magnificent ancient masterpieces.
+              <br><br>
+              Among the museum’s unrivaled collection are the complete burials of Yuya and Thuya, Psusennes I and the treasures of Tanis, and the Narmer Palette commemorating the unification of Upper and Lower Egypt under one king, which is also among the museum’s invaluable artifacts. The museum also houses the splendid statues of <strong> the great kings Khufu, Khafre, and Menkaure, </strong> the builders of the pyramids at the Giza plateau. An extensive collection of papyri, sarcophagi and jewelry, among other objects, completes this uniquely expansive museum.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-container2">
+        <div class="float-child2">
+          <img src="assets/images/Cairo/azhar.jpeg" alt="" #image3 style="border-radius: 25px; width: 95%;"(click) = zoomIn(image3)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child2" style="margin-top: 70px;">
+          <div class="text2">
+            <h1> Al-Azhar</h1>
+            <p>
+              Al-Azhar Mosque is the finest building of Cairo's Fatimid era and one of the city's earliest surviving mosques, completed in AD 972.
+              <br><br>
+              It's also one of the world's oldest universities - Caliph El-Aziz bestowed it with the status of university in AD 988 (the other university vying for "oldest" status is in Fes) and today, Al-Azhar University is still the leading theological center of the Islamic world.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="float-container1">
+        <div class="float-child1" style="margin-top: 340px !important;">
+          <img src="assets/images/Cairo/saqqara.jpeg" alt="" #image4 style="border-radius: 25px; width: 100%;"(click) = zoomIn(image4)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child1" style="margin-right: 30px;">
+          <div class="text2">
+            <h1> Saqqara </h1>
+            <p>
+              The vast necropolis of Saqqara and the nearby site of Dahshur are home to the "other pyramids," and a day trip out here is just as rewarding as a trip to Giza's pyramids. The sites are roughly 30 kilometers south of Cairo.
+              <br><br>
+              <strong> The Step Pyramid </strong>is Saqqara's most popular tourist attraction, but the entire area is littered with gorgeously painted tombs, which are well worth spending a few hours exploring.
+              <br><br>
+              Saqqara is so large, and its history as a burial site so vast, that excavations here continue to unearth finds that make headline grabbing news worldwide.
+              <br><br>
+              Just down the road is Dahshur's <strong> Red Pyramid </strong> and <strong> Bent Pyramid </strong> , which shouldn't be missed. Expect even the shortest itinerary here to take at least half a day.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-container2">
+        <div class="float-child2">
+          <img src="assets/images/Cairo/khan.jpeg" alt="" #image5 style="border-radius: 25px; width: 95%;" (click) = zoomIn(image5)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child2" style="margin-top: 75px;">
+          <div class="text2">
+            <h1> Khan el-Khalili </h1>
+            <p>
+              Khan el-Khalili is one of <Strong> the world's great shopping experiences. </Strong>
+              <br><br>
+              This souq (bazaar) is a labyrinthine collection of skinny alleyways established as a shopping district in AD 1400, which still rings with the clang of metal workers and silversmiths.
+              <br><br>
+              The main streets have long ago given themselves over completely to the tourist trade (with plenty of cheap papyrus pictures and plastic pyramids on display), but divert off the main drag into the surrounding alleyways, and the tiny stores and cluttered workshops are some of the best places to visit to pick up traditional products in Egypt.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-container1">
+        <div class="float-child1">
+          <img src="assets/images/Cairo/citadel.webp" alt="" #image6 style="border-radius: 25px; width: 90%; margin-top: 100px; margin-left: 30px;" (click) = zoomIn(image6)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child1">
+          <div class="text2">
+            <h1> Citadel </h1>
+            <p>
+              In a commanding location at the foot of the Mokattam Hills, Cairo's citadel was built by Saladin in 1176.
+              <br><br>
+              The original structure he laid out has long disappeared except for the eastern outer walls, but a legacy of rulers has made their own additions here.
+              <br><br>
+              <strong> The Mosque of Muhammad Ali </strong> is the most famous monument and the main reason for visiting. Nicknamed the "Alabaster Mosque," its white stone and tall, disproportionately slender minarets are one of Cairo's great landmarks.
+              <br><br>
+              The other big reason to come up here are the views across the city; head to <strong> the Gawhara Terrace </strong>for the <strong> best panorama in town.  </strong>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-container2">
+        <div class="float-child2">
+          <img src="assets/images/Cairo/tanis.jpeg" alt="" #image7 style="border-radius: 25px; width: 95%;" (click) = zoomIn(image7)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child2" style="margin-top: 70px;">
+          <div class="text2">
+            <h1> Tanis </h1>
+            <p>
+              The remains of ancient Tanis, capital of the Tanite kings of the 21st and 22nd dynasties, lie in the northeast of the Nile Delta region, still partly buried under the ridge of the hills.
+              <br><br>
+              <strong> Tanis is probably most well-known as the lost city where Indiana Jones found the Ark of the Covenant </strong> in the classic film Raiders of the Lost Ark.
+              <br><br>
+              The movie's storyline has nothing to do with the real archaeological site, though Tanis was indeed "lost" for centuries until archaeological work here in 1939 finally managed to name this site as the city.
+              <br><br>
+              The excavated remains haven't been reconstructed as at other Ancient Egypt sites but are full of interest for the archaeologically inclined.
+              <br><br>
+              The temple remains mostly lie in ruins, with huge chunks of masonry and statuary scattered in place, while the royal necropolis with its empty tombs (the vast haul of jewelry treasures found here is now housed in its own room at the Egyptian Museum) is hugely interesting to visit.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>
+      <div class="footerStuff">
+  
+        <div class="footerItem">
+         <a href="https://egymonuments.gov.eg" target="_blank"> Ministry of Tourism Egypt  </a> 
+         |
+         <a style="cursor: text; color: white;"> Zamalek head office 3 El Adel Abou Bakr St., Zamalek , Cairo </a> 
+         |
+         <a href="https://egymonuments.gov.eg" target="_blank"> egymonuments.gov.eg  </a> 
+        </div>
+  
+        <div class="social-icons">
+          <a class="social-icon social-icon--facebook" href="https://www.facebook.com/khaled.wbas.56" target="_blank">
+            <i class="fa fa-facebook"></i>
+            <div class="tooltip">Facebook</div>
+          </a>
+          <a class="social-icon social-icon--twitter" href="https://twitter.com/khaled_garawin" target="_blank">
+            <i class="fa fa-twitter"></i>
+            <div class="tooltip">Twitter</div>
+          </a>
+          <a class="social-icon social-icon--github" href="https://github.com/LoDaAa" target="_blank">
+            <i class="fa fa-github"></i>
+            <div class="tooltip">Github</div>
+          </a>
+          <a class="social-icon social-icon--instagram" href="https://www.instagram.com/khldwleedd/" target="_blank">
+            <i class="fa fa-instagram"></i>
+            <div class="tooltip">Instagram</div>
+          </a>
+          <a class="social-icon social-icon--linkedin" href="https://www.linkedin.com/in/khaled-garaween-557181169/" target="_blank">
+            <i class="fa fa-linkedin"></i>
+            <div class="tooltip">LinkedIn</div>
+          </a>
+        </div>
+        
+      </div>
+  </footer>

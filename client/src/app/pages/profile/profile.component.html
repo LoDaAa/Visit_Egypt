@@ -1,0 +1,224 @@
+<app-header></app-header>
+    
+<header> </header>
+
+<div *ngIf = "show">
+
+<div class="all">
+
+<div class="container">
+    <div id="map"></div>
+
+    <div class="row">
+        <div class="col-lg-4 pb-5 child">
+            <!-- Account Sidebar-->
+            <div class="author-card pb-3">
+                <div class="author-card-cover" style="background-image: url(https://mythbank.com/wp-content/uploads/2022/11/egyptian-mythology-hub.jpg);"></div>
+                <div class="author-card-profile">
+                    <div class="author-card-avatar"> 
+                        <img [src]="imgProf">
+                    </div>
+                    <div class="author-card-details">
+                        <h1 class="author-card-name text-lg"> {{ firstNameProf  }} {{ lastNameProf }}</h1>
+                        <h5 class="author-card-name" style="font-size: 14px;" *ngIf="profileName !== '' "> @{{ profileName }}</h5><span class="author-card-position">Joined {{ joinedDate }} </span>
+                    </div>
+                </div>
+            </div>
+            <div class="wizard">
+                <nav class="list-group list-group-flush">
+                    <a class="list-group-item" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile"  href="#">Profile Settings</a>
+                    <a class="list-group-item" id="v-pills-password-tab" data-bs-toggle="pill" data-bs-target="#v-pills-password" href="#" *ngIf="!loggedInAPI">Password Settings</a>
+                </nav>
+            </div>
+        </div>
+        <!-- Profile Settings-->
+        <div class="tab-content" id="v-pills-tabContent">
+        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+        <div class="col-lg-12 pb-5">
+            <form class="row" #userForm = ngForm >
+                <div class="col-md-12" style="text-align: center; margin-bottom: 20px;">
+                    <div class="form-group" style="display: flex; justify-content: center;" >
+                        <img style="width: 300px;" [src]="imageUrl">
+                    </div>
+                    <small class="text-danger" *ngIf="imgBigFailure" style="margin-bottom: 10px; display: block;">
+                        Image is too large.
+                     </small>
+                    <input type="file" accept="image/*" name = "imgFile" multiple (change)="selectImage($event)">
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="account-first">First Name</label>
+                        <input class="form-control" [(ngModel)]="registerData.firstName" name = "firstName" 
+                        [class.is-invalid] = "firstName.errors?.pattern"
+                        #firstName = "ngModel" type="text" id="account-first" pattern = "([a-zA-Z]+?)">
+                        <small class="text-danger" *ngIf = "firstName.errors?.pattern" > Only Alphabets allowed </small>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="account-last">Last Name</label>
+                        <input class="form-control" [(ngModel)]="registerData.lastName" name = "lastName"
+                        [class.is-invalid] = "lastName.errors?.pattern"
+                        #lastName = "ngModel" type="text" id="account-last" pattern = "([a-zA-Z]+?)">
+                        <small class="text-danger" *ngIf = "lastName.errors?.pattern" > Only Alphabets allowed </small>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="account-user">Username</label>
+                        <input class="form-control" [(ngModel)]="registerData.username" name = "username" 
+                        [class.is-invalid] = "username.invalid && username.touched"
+                        type="text" id="account-user" required #username = "ngModel">
+                        <small class="text-danger" *ngIf = "username.errors?.required && username.touched" > Username is required </small>     
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="account-email">E-mail Address</label>
+                        <input class="form-control" [(ngModel)]="registerData.email" name = "email" type="email" 
+                        id="account-email" #email = "ngModel" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" 
+                        [class.is-invalid] = "email.invalid && email.touched"
+                        required disabled>
+                        <div class="text-danger" *ngIf = "email.errors && email.touched ">
+                            <small *ngIf = "email.errors.required" > Email Address is required </small>     
+                            <small *ngIf = "email.errors.pattern" > Not A Valid Email Address </small>
+                        </div>  
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="account-phone">Phone Number</label>
+                        <input class="form-control" [(ngModel)]="registerData.phone" name = "phone" type="text" 
+                        [class.is-invalid] = "phone.invalid && phone.touched"
+                        #phone = "ngModel" id="account-phone" pattern="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$">
+                        <small class="text-danger" *ngIf = "phone.errors?.pattern && phone.touched"> Not a valid phone number </small>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="account-location">Location</label>
+                        <input class="form-control" [(ngModel)]="registerData.location" name = "location" type="text" id="account-location">
+                    </div>
+                </div>
+                <small class="text-success" *ngIf="imageSuccess" style="margin-bottom: 10px;">
+                    Image has been uploaded successfully.
+                 </small>
+                <small class="text-success" *ngIf="successUpdate" style="margin-bottom: 10px;">
+                    Successful Update.
+                 </small>
+                <div class="col-6">
+                    <div>
+                        <button class="btn btn-style-1 btn-primary" type="button" [disabled] = "!(userForm.valid && userForm.dirty) || imgBigFailure" (click) = "updateProfile()">Update Profile</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="v-pills-password" role="tabpanel" aria-labelledby="v-pills-password-tab">
+    <div class="col-lg-12 pb-5">
+        <form class="row" #userForm = ngForm>
+            <div class="col-md-12" *ngIf="!showPasswordControls">
+                <div class="form-group">
+                    <label for="oldPassword-ln">Current Password</label>
+                    <input  type="password"  [(ngModel)]="oldPassword" name = "oldPassword" #oldPasswordProf = "ngModel" 
+                    [class.is-invalid] = "oldPassFailure"
+                    class="form-control" id="oldPassword-ln" placeholder="Current Password" (input) = "clearOldNewPasserror()">
+                    <small class="text-danger" *ngIf = "oldPassFailure"> Current password is not correct. </small>
+                </div>
+            </div>
+            <div class="col-12" *ngIf="!showPasswordControls">
+                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                        <button class="btn btn-style-1 btn-primary" type="button" [disabled] = "oldPassFailure || oldPassword === ''" (click)="VerifyOldPassword()" id="verify"> Verify</button>
+                    </div>
+            </div>
+            <div class="col-md-6" *ngIf="showPasswordControls">
+                <div class="form-group">
+                    <label for="new-password">New Password</label>
+                    <input [(ngModel)]="newPassword" type="password" #newPasswordProf = "ngModel" 
+                    name = "newPasswordProf" [class.is-invalid] = "newPasswordProf.invalid && newPasswordProf.touched"
+                    class="form-control" id="new-password" placeholder="New Password" (input) = "clearOldNewPasserror()" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
+                    <small class="text-danger" *ngIf = "newPasswordProf.invalid && newPasswordProf.touched"> The password must be at least 8 long contains at least a character and a number</small> 
+                </div>
+            </div>
+            <div class="col-md-6" *ngIf="showPasswordControls">
+                <div class="form-group">
+                    <label for="confirm-new-password">Confirm New Password</label>
+                    <input [(ngModel)]="confirmNewPassword" type="password" #confirmNewPasswordProf = "ngModel" 
+                    name = "confirmNewPasswordProf" [class.is-invalid] = "confirmNewPasswordProf?.invalid && confirmNewPasswordProf.touched"
+                    class="form-control" id="confirm-new-password" placeholder="Confirm New Password" pattern="{{ newPassword }}" >
+                    <small class="text-danger" *ngIf="confirmNewPasswordProf?.invalid && confirmNewPasswordProf.touched">Passwords Don't match</small> 
+                </div>
+            </div>
+
+            <small class="text-danger" *ngIf="nullNewPassword" style="margin-bottom: 10px;">
+                Please enter a password
+             </small>
+            <small class="text-danger" *ngIf="samePassword" style="margin-bottom: 10px;">
+                Same password as old password has been entered.
+                Please enter a new password
+             </small>
+            <small class="text-success" *ngIf="successPassChange && !samePassword" style="margin-bottom: 10px;">
+                Password has been changed Successfully.
+             </small>
+            <div class="col-12" *ngIf="showPasswordControls">
+                <div class="d-flex flex-wrap justify-content-between align-items-center">
+                    <button class="btn btn-style-1 btn-primary" id="changePass" [disabled] ="newPassword === '' || confirmNewPassword === '' || nullNewPassword || samePassword || !(newPassword === confirmNewPassword) || userForm.form.invalid" type="button" (click)="changePassword()"> Change</button>
+                </div>
+           </div>
+         </form>
+      </div>
+    </div>
+
+    </div>
+</div>
+</div>
+
+<div class="container">
+
+</div>
+<footer>
+    <div class="footerStuff">
+  
+      <div class="footerItem">
+       <a href="https://egymonuments.gov.eg" target="_blank"> Ministry of Tourism Egypt  </a> 
+       |
+       <a style="cursor: text; color: white;"> Zamalek head office 3 El Adel Abou Bakr St., Zamalek , Cairo </a> 
+       |
+       <a href="https://egymonuments.gov.eg" target="_blank"> egymonuments.gov.eg  </a> 
+      </div>
+  
+      <div class="social-icons">
+        <a class="social-icon social-icon--facebook" href="https://www.facebook.com/khaled.wbas.56" target="_blank">
+          <i class="fa fa-facebook"></i>
+          <div class="tooltip">Facebook</div>
+        </a>
+        <a class="social-icon social-icon--twitter" href="https://twitter.com/khaled_garawin" target="_blank">
+          <i class="fa fa-twitter"></i>
+          <div class="tooltip">Twitter</div>
+        </a>
+        <a class="social-icon social-icon--github" href="https://github.com/LoDaAa" target="_blank">
+          <i class="fa fa-github"></i>
+          <div class="tooltip">Github</div>
+        </a>
+        <a class="social-icon social-icon--instagram" href="https://www.instagram.com/khldwleedd/" target="_blank">
+          <i class="fa fa-instagram"></i>
+          <div class="tooltip">Instagram</div>
+        </a>
+        <a class="social-icon social-icon--linkedin" href="https://www.linkedin.com/in/khaled-garaween-557181169/" target="_blank">
+          <i class="fa fa-linkedin"></i>
+          <div class="tooltip">LinkedIn</div>
+        </a>
+      </div>
+  
+    </div>
+  </footer>
+
+</div>
+</div>
+
+  <div class="d-flex justify-content-center" *ngIf="!show">
+    <div class="spinner-border" role="status" >
+      <span class="sr-only" id="loading"></span>
+    </div>
+</div>

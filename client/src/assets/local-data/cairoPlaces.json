@@ -1,0 +1,59 @@
+{
+    "cairoplaces": [
+        {
+            "placeId": 1,
+            "title": "Pyramids",
+            "imageUrl": "assets/images/Cairo/pyramidsPlace.jpeg",
+            "param" : "pyramids"
+        },
+        {
+            "placeId": 2,
+            "title": "Egyptian Museum",
+            "imageUrl": "assets/images/Cairo/museum.jpeg",
+            "param" : "egyptianMuseum"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Cairo/azhar.jpeg",
+            "param" : "al-azhar"
+        },
+        {
+            "placeId": 4,
+            "title": "Saqqara",
+            "imageUrl": "assets/images/Cairo/saqqara.jpeg",
+            "param" : "saqqara"
+        }
+        ,
+        {
+            "placeId": 5,
+            "title": "Khan El-Khalili",
+            "imageUrl": "assets/images/Cairo/khan.jpeg",
+            "param" : "khan-El-Khalili"
+        },
+        {
+            "placeId": 6,
+            "title": "Citadel",
+            "imageUrl": "assets/images/Cairo/citadel.webp",
+            "param" : "citadel"
+        },
+        {
+            "placeId": 7,
+            "title": "Tanis",
+            "imageUrl": "assets/images/Cairo/tanis.jpeg",
+            "param" : "tanis"
+        },
+        {
+            "placeId": 8,
+            "title": "Explore the Nile Island District of Zamalek",
+            "imageUrl": "assets/images/Cairo/zamalek.jpeg",
+            "param" : "exploreTheNileIslandDistrictOfZamalek"
+        },
+        {
+            "placeId": 9,
+            "title": "Day Trip to Al-Fayoum",
+            "imageUrl": "assets/images/Cairo/fayoum.jpeg",
+            "param" : "dayTripToAl-Fayoum"
+        }
+    ]
+}

@@ -1,0 +1,247 @@
+<app-header></app-header>
+
+<header> </header>
+  
+<section id="section07" class="demo">
+  <a href="#store"><span></span><span></span><span></span></a>  
+</section>
+
+<section id="store" class="store">
+    <div class="container">
+      <div class="row">
+          <div class="col-10 mx-auto col-sm-9 text-center">
+              <h1 class="text-capitalize"> <span class="span"> {{ 'recommended' | translate }} </span> <strong class="banner-title"> {{ 'attractions' | translate }} </strong> </h1>
+          </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group">
+          <div class="form-col-12">
+            <a class="btn text-uppercase" (click) = "showImageDivs('all')" [style.background-color]=" all ? 'beige' : 'transparent'"> all</a>
+            <a class="btn text-uppercase" (click) = "showImageDivs('cairo')" [style.background-color]=" cairo && cairoColor ? 'beige' : 'transparent'"> Cairo</a>
+            <a class="btn text-uppercase" (click) = "showImageDivs('alex')" [style.background-color]=" alex && alexColor ? 'beige' : 'transparent'">Alexandria</a>
+            <a class="btn text-uppercase" (click) = "showImageDivs('hurghada')" [style.background-color]=" hurghada && hurghadaColor ? 'beige' : 'transparent'"> Hurghada</a>
+            <a class="btn text-uppercase" (click) = "showImageDivs('sharm')" [style.background-color]=" sharm && sharmColor ? 'beige' : 'transparent'"> Sharm El-Sheikh</a>
+            <a class="btn text-uppercase" (click) = "showImageDivs('luxor')" [style.background-color]=" luxor && luxorColor ? 'beige' : 'transparent'"> Luxor</a>
+            <a class="btn text-uppercase" (click) = "showImageDivs('ancient')" [style.background-color]=" ancient && ancientColor ? 'beige' : 'transparent'"> Ancient Cities</a>
+            <a class="btn text-uppercase" (click) = "showImageDivs('beach')" [style.background-color]=" beaches && beachesColor ? 'beige' : 'transparent'">Beaches</a>
+         </div>
+        </div>
+      </div>
+
+      <div class="row" *ngIf = "cairo"> 
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" *ngFor = "let place of cairoPlaces">
+          <div class="card" style="height:95%">
+            <div class="img-container">
+              <img [src] = "place.imageUrl" class="card-img-top store-img"  (click) = "show(place,'cairo')"
+              (click)="checkAddStatus()" id="cairoImage">
+              <span class="store-item-icon" id="addToYourPlaceCairo" title="Add to your trip" (click)="addToYourTrip(place, 'cairo')">
+                <i class="fas fa-suitcase" ></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name"> {{ place.title }} </h5>
+                <h5 class="store-item-value"> 
+                  <button class="btn2" [routerLink] = "['/planYourTrip', place.param ]"> READ MORE </button>
+                  </h5>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    
+    <div mdbModal #frame="mdbModal" class="modal fade" id="frameModalTop" tabindex="-1" role="dialog"
+    aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+   <div class="modal-content"  *ngIf="showFrame">
+    <app-place-details [place]="aPlace" [frame]="frame" [city]="city" [addInitialState]="addInitialState" [addStatusText]="addStatusText" [addState]="addState"> </app-place-details>
+  </div>
+ </div>
+ </div>
+
+ <div mdbModal #frameLogin="mdbModal" class="modal fade"
+aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+  <div class="Content" *ngIf="showLoginForm">
+    <app-login [frame]="frame"> </app-login>
+  </div>
+</div>
+</div>
+</div>
+
+    <div class="row" *ngIf = "alex"> 
+      <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" *ngFor = "let place of alexPlaces">
+        <div class="card" style="height:95%">
+          <div class="img-container">
+            <img [src] = "place.imageUrl" class="card-img-top store-img" alt="" (click) = "show(place,'alex')"
+            (click)="checkAddStatus()">
+            <span class="store-item-icon" title="Add to your trip" (click)="addToYourTrip(place, 'alex')">
+              <i class="fas fa-suitcase" ></i>
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="card-text d-flex justify-content-between text-capitalize">
+              <h5 id="store-item-name"> {{ place.title }} </h5>
+              <h5 class="store-item-value"> 
+                <button class="btn2" [routerLink] = "['/planYourTrip', place.param ]"> READ MORE </button>
+                </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" *ngIf = "hurghada"> 
+      <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" *ngFor = "let place of hurghadaPlaces">
+        <div class="card" style="height:95%">
+          <div class="img-container">
+            <img [src] = "place.imageUrl" class="card-img-top store-img" alt="" (click) = "show(place,'hurghada')"
+            (click)="checkAddStatus()">
+            <span class="store-item-icon" title="Add to your trip" (click)="addToYourTrip(place, 'hurghada')">
+              <i class="fas fa-suitcase" ></i>
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="card-text d-flex justify-content-between text-capitalize">
+              <h5 id="store-item-name"> {{ place.title }} </h5>
+              <h5 class="store-item-value"> 
+                <button class="btn2" [routerLink] = "['/planYourTrip', place.param ]"> READ MORE </button>
+                </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" *ngIf = "sharm"> 
+      <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" *ngFor = "let place of sharmPlaces">
+        <div class="card" style="height:95%">
+          <div class="img-container">
+            <img [src] = "place.imageUrl" class="card-img-top store-img" alt="" (click) = "show(place,'sharm')"
+            (click)="checkAddStatus()">
+            <span class="store-item-icon" title="Add to your trip" (click)="addToYourTrip(place, 'sharm')">
+              <i class="fas fa-suitcase" ></i>
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="card-text d-flex justify-content-between text-capitalize">
+              <h5 id="store-item-name"> {{ place.title }} </h5>
+              <h5 class="store-item-value"> 
+                <button class="btn2" [routerLink] = "['/planYourTrip', place.param ]"> READ MORE </button>
+                </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" *ngIf = "luxor"> 
+      <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" *ngFor = "let place of luxorPlaces">
+        <div class="card" style="height:95%">
+          <div class="img-container">
+            <img [src] = "place.imageUrl" class="card-img-top store-img" alt="" (click) = "show(place,'luxor')"
+            (click)="checkAddStatus()">
+            <span class="store-item-icon" title="Add to your trip" (click)="addToYourTrip(place, 'luxor')">
+              <i class="fas fa-suitcase" ></i>
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="card-text d-flex justify-content-between text-capitalize">
+              <h5 id="store-item-name"> {{ place.title }} </h5>
+              <h5 class="store-item-value"> 
+                <button class="btn2" [routerLink] = "['/planYourTrip', place.param ]"> READ MORE </button>
+                </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" *ngIf = "ancient"> 
+      <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" *ngFor = "let place of ancientPlaces">
+        <div class="card" style="height:95%">
+          <div class="img-container">
+            <img [src] = "place.imageUrl" class="card-img-top store-img" alt="" (click) = "show(place,'ancient')"
+            (click)="checkAddStatus()">
+            <span class="store-item-icon" title="Add to your trip" (click)="addToYourTrip(place, 'ancient')">
+              <i class="fas fa-suitcase" ></i>
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="card-text d-flex justify-content-between text-capitalize">
+              <h5 id="store-item-name"> {{ place.title }} </h5>
+              <h5 class="store-item-value"> 
+                <button class="btn2" [routerLink] = "['/planYourTrip', place.param ]"> READ MORE </button>
+                </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" *ngIf = "beaches"> 
+      <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" *ngFor = "let place of beachesList">
+        <div class="card" style="height:95%">
+          <div class="img-container">
+            <img [src] = "place.imageUrl" class="card-img-top store-img" alt="" (click) = "show(place,'beaches')"
+            (click)="checkAddStatus()">
+            <span class="store-item-icon" title="Add to your trip" (click)="addToYourTrip(place, 'beaches')">
+              <i class="fas fa-suitcase" ></i>
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="card-text d-flex justify-content-between text-capitalize">
+              <h5 id="store-item-name"> {{ place.title }} </h5>
+              <h5 class="store-item-value"> 
+                <button class="btn2" [routerLink] = "['/planYourTrip', place.param ]"> READ MORE </button>
+                </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footerStuff">
+
+      <div class="footerItem">
+       <a href="https://egymonuments.gov.eg" target="_blank"> Ministry of Tourism Egypt  </a> 
+       |
+       <a style="cursor: text; color: white;"> Zamalek head office 3 El Adel Abou Bakr St., Zamalek , Cairo </a> 
+       |
+       <a href="https://egymonuments.gov.eg" target="_blank"> egymonuments.gov.eg  </a> 
+      </div>
+
+      <div class="social-icons">
+        <a class="social-icon social-icon--facebook" href="https://www.facebook.com/khaled.wbas.56" target="_blank">
+          <i class="fa fa-facebook"></i>
+          <div class="tooltip">Facebook</div>
+        </a>
+        <a class="social-icon social-icon--twitter" href="https://twitter.com/khaled_garawin" target="_blank">
+          <i class="fa fa-twitter"></i>
+          <div class="tooltip">Twitter</div>
+        </a>
+        <a class="social-icon social-icon--github" href="https://github.com/LoDaAa" target="_blank">
+          <i class="fa fa-github"></i>
+          <div class="tooltip">Github</div>
+        </a>
+        <a class="social-icon social-icon--instagram" href="https://www.instagram.com/khldwleedd/" target="_blank">
+          <i class="fa fa-instagram"></i>
+          <div class="tooltip">Instagram</div>
+        </a>
+        <a class="social-icon social-icon--linkedin" href="https://www.linkedin.com/in/khaled-garaween-557181169/" target="_blank">
+          <i class="fa fa-linkedin"></i>
+          <div class="tooltip">LinkedIn</div>
+        </a>
+      </div>
+      
+    </div>
+</footer>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>

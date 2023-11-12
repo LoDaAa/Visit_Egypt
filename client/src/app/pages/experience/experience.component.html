@@ -1,0 +1,123 @@
+<app-header></app-header>
+<header> </header>
+
+<div *ngIf = "show">
+
+<div class="container">
+
+    <div class="row">
+        <div class="form-group">
+          <div class="form-col-12">
+            <a class="btn text-uppercase" (click) = "LoadPlacesComments('all')" [style.background-color]=" allColor ? 'beige' : 'transparent'"> all</a>
+            <a class="btn text-uppercase" id="cairo" (click) = "LoadPlacesComments('cairo')" [style.background-color]="cairoColor ? 'beige' : 'transparent'"> Cairo</a>
+            <a class="btn text-uppercase" (click) = "LoadPlacesComments('alex')" [style.background-color]=" alexColor ? 'beige' : 'transparent'">Alexandria</a>
+            <a class="btn text-uppercase" (click) = "LoadPlacesComments('hurghada')" [style.background-color]="hurghadaColor ? 'beige' : 'transparent'"> Hurghada</a>
+            <a class="btn text-uppercase" (click) = "LoadPlacesComments('sharm')" [style.background-color]=" sharmColor ? 'beige' : 'transparent'"> Sharm El-Sheikh</a>
+            <a class="btn text-uppercase" (click) = "LoadPlacesComments('luxor')" [style.background-color]=" luxorColor ? 'beige' : 'transparent'"> Luxor</a>
+            <a class="btn text-uppercase" (click) = "LoadPlacesComments('ancient')" [style.background-color]=" ancientColor ? 'beige' : 'transparent'"> Ancient Cities</a>
+            <a class="btn text-uppercase" (click) = "LoadPlacesComments('beaches')" [style.background-color]="beachesColor ? 'beige' : 'transparent'">Beaches</a>
+         </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-10 mx-auto col-md-6">
+            <form>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <select class="form-control" style="width: 150px;" name = "place" [(ngModel)]="selectedPlace" 
+                        [disabled]="!isCityClicked" (ngModelChange)="onPlacesChange()">
+                            <option value="Select a place" selected hidden>  Select a place</option>
+                            <option *ngFor="let place of places" [ngValue]="place"> {{ place }} </option>
+                        </select>
+                    </div>
+                    <input [(ngModel)]="comment" name = "comment" type="text" class="form-control" placeholder="add a comment..." [disabled]="!isPlaceChosen">
+                    <button class="input-group-text" (click)="addComment()" [disabled]="comment == ''">Comment</button>
+                    </div>
+            </form>
+        </div>
+      </div>
+
+</div>
+
+<div class="container mt-1 mb-5">
+    <div class="d-flex justify-content-center row">
+        <div class="d-flex flex-column col-md-8">
+            <div class="d-flex flex-row align-items-center text-left comment-top p-2 bg-white border-bottom px-4">
+            </div>
+            <div class="coment-bottom bg-white p-2 px-4">
+                <div class="commented-section mt-2" *ngFor="let comment of comments">
+                    <div class="d-flex flex-row align-items-center commented-user">
+                        <div class="d-flex flex-row add-comment-section mt-4 mb-4"><img class="img-fluid img-responsive rounded-circle mr-2" [src]="comment.imageURL" width="38"></div>
+                        <h5 class="mr-2">{{ comment.username }}</h5><span class="dot mb-1"></span><span class="mb-1 ml-2" > {{ comment.timeNow }}</span>
+                        <span class="mb-1 ml-2" >({{ comment.place }})</span>
+                    </div>
+                    <div class="comment-text-sm"><span>{{ comment.comment }} </span></div>
+                    <div class="reply-section">
+                        <div class="d-flex flex-row align-items-center voting-icons">
+                            <a class="fa fa-sort-up fa-2x mt-3 hit-voting" (click)="LikeUnLike(comment, 'like')"  style="cursor: pointer;" disabled="disabled"></a>
+                            <i class="fa fa-sort-down fa-2x mb-3 hit-voting" (click)="LikeUnLike(comment, 'unLike')" style="cursor: pointer;"></i>
+                            <span class="ml-2"> {{ comment.likes }} </span> 
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footerStuff">
+  
+      <div class="footerItem">
+       <a href="https://egymonuments.gov.eg" target="_blank"> Ministry of Tourism Egypt  </a> 
+       |
+       <a style="cursor: text; color: white;"> Zamalek head office 3 El Adel Abou Bakr St., Zamalek , Cairo </a> 
+       |
+       <a href="https://egymonuments.gov.eg" target="_blank"> egymonuments.gov.eg  </a> 
+      </div>
+  
+      <div class="social-icons">
+        <a class="social-icon social-icon--facebook" href="https://www.facebook.com/khaled.wbas.56" target="_blank">
+          <i class="fa fa-facebook"></i>
+          <div class="tooltip">Facebook</div>
+        </a>
+        <a class="social-icon social-icon--twitter" href="https://twitter.com/khaled_garawin" target="_blank">
+          <i class="fa fa-twitter"></i>
+          <div class="tooltip">Twitter</div>
+        </a>
+        <a class="social-icon social-icon--github" href="https://github.com/LoDaAa" target="_blank">
+          <i class="fa fa-github"></i>
+          <div class="tooltip">Github</div>
+        </a>
+        <a class="social-icon social-icon--instagram" href="https://www.instagram.com/khldwleedd/" target="_blank">
+          <i class="fa fa-instagram"></i>
+          <div class="tooltip">Instagram</div>
+        </a>
+        <a class="social-icon social-icon--linkedin" href="https://www.linkedin.com/in/khaled-garaween-557181169/" target="_blank">
+          <i class="fa fa-linkedin"></i>
+          <div class="tooltip">LinkedIn</div>
+        </a>
+      </div>
+  
+    </div>
+  </footer>
+  
+</div>
+
+<div class="d-flex justify-content-center" *ngIf="!show">
+    <div class="spinner-border" role="status" >
+      <span class="sr-only" id="loading"></span>
+    </div>
+</div>
+
+<div mdbModal #frameLogin="mdbModal" class="modal fade"
+aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+  <div class="Content" *ngIf="showLoginForm">
+    <app-login [frame]="frameLogin"> </app-login>
+  </div>
+</div>
+</div>
+</div>

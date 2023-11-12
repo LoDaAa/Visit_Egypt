@@ -1,0 +1,169 @@
+.row
+{
+  background-color: black;
+}
+.column 
+{
+    width: 20%;
+}
+.view
+{
+  transition: 1s ease-in-out;
+}
+.view:hover
+{
+    opacity: 0.7;
+    transform: scale(0.99);
+    cursor: pointer;
+}
+.view:hover > .text
+{
+  font-size: 20px;
+}
+a {
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+.middle {
+  position: absolute;
+  top: 85%;
+  left: 30%;
+  z-index: 199;
+}
+.text
+{
+  color: white;
+  font-size: 30px;
+  border-radius: 10px;
+}
+.middleSpecial
+{
+  position: absolute;
+  top: 85%;
+  left: 20%;
+  z-index: 199;
+}
+.textSpecial
+{
+  color: white;
+  font-size: 25px;
+}
+.cities
+{
+  background-image: url("/assets/images/ancientEgyptianCitiesBackground.jpeg");
+  min-height: 700px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.citiesHeader
+{
+  position: absolute;
+  bottom: -50%;
+  left: 5%;
+}
+.citiesHeader h1, .beaches h1
+{
+  width: 100%;
+  color: white;
+  background-color: #1f2022;
+  background-image: linear-gradient(315deg, #1f2022 40%, #8693ab 74%);
+}
+.citiesHeader h4, .beaches h4
+{
+  width: 100%;
+  color: white;
+  background-color: #1f2022;
+  background-image: linear-gradient(315deg, #1f2022 40%, #8693ab 74%);
+}
+.beaches
+{
+  background-image: url("/assets/images/beachBackground.jpeg");
+  min-height: 600px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.beachesHeader
+{
+  position: absolute;
+  bottom: -130%;
+  left: 5%;
+}
+footer
+{
+  background-color: #1f2022;
+  color: #bbb;
+}
+.footerStuff
+{
+  display: flex;
+  justify-content: space-between;
+}
+.footerItem
+{
+  margin-top: 30px;
+}
+.footerItem a
+{
+  text-decoration: none;
+  color: beige;
+  padding: 10px;
+}
+.social-icons {
+  display: flex;
+}
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  color: beige;
+  &:hover {
+    background-color: beige;   
+    i
+    {
+      color: black;
+    }
+    .tooltip {
+      visibility: visible;
+      opacity: 1;
+      transform: translate(-50%, -150%);
+    }
+  }
+  &:active {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5) inset;
+  }
+}
+i:hover
+{
+  color: black;
+}
+.tooltip {
+  display: block;
+  position: absolute;
+  left: 50%;
+  padding: 0.8rem 1rem;
+  border-radius: 40px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+  text-transform: uppercase;
+  transform: translate(-50%, -100%);
+  transition: all 0.3s ease;
+  z-index: 1;
+  color: beige;
+}

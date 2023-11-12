@@ -1,0 +1,11 @@
+<button
+    class="p-3 w-56 text-l font-bold rounded-full overflow-hidden hover-softbounce-once"
+    [ngStyle] = "{'background-color': addState ? 'beige' : 'green'}"
+    (click)="addToYourTrip()" [disabled]="addInitialState"> 
+        <div class="grid grid-cols-1 grid-rows-1 overflow-hidden">
+            <span
+              class="col-start-1 col-span-1 row-start-1 row-span-1"
+              > {{ addStatusText }}
+            </span>
+        </div>
+     </button>

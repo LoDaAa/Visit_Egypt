@@ -1,0 +1,280 @@
+<app-header></app-header>
+
+<header>
+  
+    <div class="banner">
+      <div class="container2">
+        <h2 class="text1"> Alexandria </h2>
+      </div>
+      <div class="button">
+        <a class="btn2">
+         Explore Places To Visit In Alexandria
+       </a>
+     </div>
+     </div>
+    
+      <!-- Slider -->
+    
+      <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'" [interval]='3000' style=" width:100% !important; height: 500px !important;">
+        <mdb-carousel-item>
+          <div class="view" style=" width:100% !important; height: 800px !important;">
+          <img class="d-block w-100" src="assets/images/Alexandria/alexBack5.jpeg" alt="Second slide">
+          <div class="mask rgba-black-light"></div>
+          </div>
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <div class="view" style=" width:100% !important; height: 800px !important;">
+          <img class="d-block w-100" src="assets/images/Alexandria/alexBack2.jpeg" alt="Third slide">
+          <div class="mask rgba-black-light"></div>
+          </div>
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <div class="view" style=" width:100% !important; height: 800px !important;">
+          <img class="d-block w-100" src="assets/images/Alexandria/alexBack3.jpeg" alt="Third slide">
+          <div class="mask rgba-black-light"></div>
+          </div>
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <div class="view" style=" width:100% !important; height: 800px !important;">
+          <img class="d-block w-100" src="assets/images/Alexandria/alexBack4.png" alt="Third slide">
+          <div class="mask rgba-black-light"></div>
+          </div>
+        </mdb-carousel-item>
+       
+      </mdb-carousel>
+    
+    </header>
+
+    <div class="places">
+
+      <h1> <span> Places To Go In Alexandria </span></h1>
+
+      <div class="float-container">
+        <div class="float-child" style="margin-top: 90px;">
+          <img src="assets/images/Alexandria/library.jpeg" alt="" #image1 style="border-radius: 25px; width: 100%;" (click) = zoomIn(image1)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child" style="margin-top: -50px;">
+          <div class="text">
+            <h1> Bibliotheca Alexandria</h1>
+            <p>
+              The Bibliotheca Alexandrina is one of Egypt's most important contemporary landmarks and the cultural heart of the city. It contains one of the modern world's most ambitious libraries and a host of museums exploring Alexandria's history and heritage.
+              <br><br>
+              Its architecture is centered around a giant sun disk, which presides over the waterfront Corniche. Inside, the huge main library and its reading room can hold eight million volumes.
+              <br><br>
+              Here, Alexandria's Antiquities Museum holds a collection that romps from Ancient Egypt through to the Greco-Roman era, with its highlight exhibits displaying statuary found during underwater archaeological excavations in the harbor. Also below the library is the Manuscript Museum, displaying a collection of ancient texts and scrolls.
+              <br><br>
+              There are also various halls hosting rotating contemporary art exhibitions, a permanent Egyptian folk art collection, and <strong>a Science Museum  </strong> and <Strong> Planetarium </Strong> that are aimed squarely at children.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-container1">
+        <div class="float-child1">
+          <img src="assets/images/Alexandria/corniche.jpeg" alt="" #image2 style="border-radius: 25px; width: 100%;" (click) = zoomIn(image2)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child1" style="margin-right: 30px; margin-top: 20px;">
+          <div class="text2">
+            <h1> Stroll the Corniche </h1>
+            <p>
+              Downtown Alexandria's wide, waterfront Corniche Road is as much a symbol of the city as any of its monuments.
+              <br><br>
+              Strolling the Corniche, particularly the section between the main shorefront square of Midan Saad Zaghloul to Fort Qaitbey on the Eastern Harbor's western tip, gives you a real feel for the era of cosmopolitan elegance and decadence that marked this city in the late 19th and early 20th centuries.
+              <br><br>
+              Much of the architecture from this era still stands along the Corniche, though these days, much of it is heavily dilapidated and falling into disrepair.
+              <br><br>
+              During your stroll, the most famous landmarks along this stretch include the multiple-domed Abu Abbas al-Mursi Mosque and the still standing heritage hotels, <a> the Steigenberger Cecil Hotel </a> and <a> Paradise Inn Windsor Palace Hotel.</a>
+              <br><br>
+              These were once the grandest addresses in town, and both feature in Lawrence Durrell's classic Alexandria Quartet novels set in the city. The Cecil, in its hey-day, is also famous for playing host to mystery author Agatha Christie, the British Secret Service and Winston Churchill during WWII, and Egypt's beloved singer Umm Khalthoum.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-container2">
+        <div class="float-child2">
+          <img src="assets/images/Alexandria/FortQaitbey .jpeg" #image3 alt="" style="border-radius: 25px; width: 95%;" (click) = zoomIn(image3)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child2" style="margin-top: 70px;">
+          <div class="text2">
+            <h1> Fort Qaitbey </h1>
+            <p>
+              Walk the long shore-front Corniche road of the Eastern Harbor heading west, and you'll finally arrive at Fort Qaitbey.
+              <br><br>
+              It may be a poor substitute for what was once the site of the mighty <strong> Pharos Lighthouse </strong> - one of the seven wonders of the ancient world, which was toppled by a violent earthquake in 1303 - but this squat fort has been standing guard over Alexandria since 1480.
+              <br><br>
+              Fort Qaitbey was built by Mamluke Sultan Qaitbey in an effort to fortify this important Egyptian port from attack, and rubble from the toppled lighthouse was used in its construction.
+              <br><br>
+              Inside, you can explore the series of stone-walled chambers and climb up to the roof to look out over the Mediterranean.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="float-container1">
+        <div class="float-child1" style="margin-top: 180px !important;">
+          <img src="assets/images/Alexandria/roman2.jpeg" alt="" #image4 style="border-radius: 25px; width: 100%;" (click) = zoomIn(image4)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child1" style="margin-right: 30px;">
+          <div class="text2">
+            <h1> Kom el-Dikka </h1>
+            <p>
+              Nobody thought much of the ancient rubble mound in central Alexandria until, in the 1960s, they decided to clear the site to make way for new housing.
+              <br><br>
+            As work commenced, the area known as Kom el-Dikka ("Mound of Rubble") revealed a whole swag of ancient ruins buried beneath, including a small <strong>  Roman theater. </strong>
+            <br><br>
+            Today the area is a small archaeological park with remains from Alexandria's Greco-Roman period.
+            <br><br>
+            As well as the theater, there are remnants of a Ptolemaic temple, a Roman bathhouse, and various Roman-era villas.
+            <br><br>
+            Excavation work on the Villa of the Birds here unearthed well-preserved 3rd century mosaic floors, which have been kept in situ</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-container2">
+        <div class="float-child2">
+          <img src="assets/images/Alexandria/museum.jpeg" alt="" #image5 style="border-radius: 25px; width: 95%;" (click) = zoomIn(image5)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child2" style="margin-top: 75px;">
+          <div class="text2">
+            <h1> Alexandria National Museum </h1>
+            <p>
+              Alexandria's National Museum is a must-stop if you want to get to grips with the vast history of this famed city.
+              <br><br>
+              Inside, the collection guides you from the Pharaonic era (in the basement), to the Hellenistic heyday, when Alexandria and Egypt were governed by the Ptolemy dynasty begun by Alexander the Great (on the ground floor), and up to the Byzantine and Islamic periods (on the 1st floor).
+              <br><br>
+              The ground floor's exhibits of statuary and artifacts from the underwater archaeological explorations of the sunken port city of Heracleion-Thonis in Aboukir Bay, are the museum's major highlight.
+              <br><br>
+              The museum does a fantastic job of bringing ancient Alexandria to life, including excellent map drawing exhibits that imagine what the classical city would have looked like, helping visitors understand the changing face of this city</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-container1">
+        <div class="float-child1">
+          <img src="assets/images/Alexandria/montazah.jpeg" alt="" #image6 style="border-radius: 25px; width: 90%; margin-top: 80px; margin-left: 30px;" (click) = zoomIn(image6)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child1">
+          <div class="text2">
+            <h1> Montazah Gardens </h1>
+            <p>
+              An oasis of calm on the city's eastern edge, Montazah is a lush haven of tall palm trees, trimmed lawns, and blossoming flowers that was once off-limits to all but the royal court and their hangers-on.
+              <br><br>
+              uilt as a hunting lodge in the 1890s by Khedive Abbas Hilmi, it was later extended substantially by King Fuad and replaced <Strong> Ras el-Tin Palace </Strong> as the royal family's summer house.
+              <br><br>
+              The eccentrically designed <Strong> Montazah Palace </Strong> , with its ornate Florentine-inspired towers and Rococo flourishes, is not open to the public, but everyone is welcome to stroll within the sprawling gardens, which can be a welcome slice of nature after a day spent within Alexandria's hustle.
+              <br><br>
+              On the coastal end of the park is a small <Strong> beach </Strong> with a peculiarly whimsical bridge to a small island.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-container2">
+        <div class="float-child2">
+          <img src="assets/images/Alexandria/restaurant.jpeg" alt="" #image7 style="border-radius: 25px; width: 95%;" (click) = zoomIn(image7)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child2" style="margin-top: 70px;">
+          <div class="text2">
+            <h1> Alexandria's Fish Restaurants </h1>
+            <p>
+              Many visitors come to Alexandria primely to dine on the city's fresh seafood.
+              <br><br>
+              The two best areas for restaurants serving fresh fish are the harborfront, where you get sea views with your meal, and the working-class district of Anfushi, which stretches west from <Strong> Fort Qaitbey  </Strong> and the harbor in a warren of lanes.
+              <br><br>
+              Just after sunset, Anfushi is the city's liveliest area, with traditional coffeehouses spilling out onto the street, and the scent of sheesha (water-pipes) and grilled fish hanging in the air.
+              <br><br>
+              It's worthwhile exploring Anfushi further than its restaurant scene. On Qasr Ras el-Tin Street are the city's shipyards, while farther along the street is the bustling Alexandria fish market, which is prime territory for photographers in the mornings, when the haggling is at full throttle.
+           </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-container1">
+        <div class="float-child1">
+          <img src="assets/images/Alexandria/alamein.jpeg" alt="" #image8  style="border-radius: 25px; width: 90%; margin-top: 80px; margin-left: 30px;" (click) = zoomIn(image8)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+      </div>
+        <div class="float-child1">
+          <div class="text2">
+            <h1>El Alamein War Memorials </h1>
+            <p>
+              The hardscrabble township of El Alamein, about 112 kilometers west of Alexandria, holds a fascinating place in modern world history.
+              <br><br>
+              It was across this parched piece of nondescript desert that the Allies' first decisive victory in World War II's North Africa campaign was won.
+              <br><br>
+              The bloody battles that took place here in October 1942 killed or wounded more than 80,000 soldiers from countries as varied as Australia, New Zealand, India, and Great Britain (Allies), as well as Germany and Italy (Axis Forces).
+              <br><br>
+              Today, the war memorials that stand are a poignant reminder of the 13 days of fighting that claimed so many lives.
+              <br><br>
+              The rather excellent <strong> El Alamein War Museum </strong> does a good job of giving an overview to the El Alamein campaign, with plenty of military memorabilia displayed.
+              <br><br>
+              The <strong> Commonwealth Cemetery  </strong>is a beautifully kept tribute to the fallen, with the 7,000 tombstones in regimented rows between well-tended desert plants.
+              <br><br>
+              Just north of town, along the coastal highway, is the boxy <strong> German Memorial </strong> , where most of the 4,500 German dead are buried, and another couple of kilometers north is the <strong> Italian Memorial </strong>, which is also home to a tiny, but interesting, museum.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>
+      <div class="footerStuff">
+  
+        <div class="footerItem">
+         <a href="https://egymonuments.gov.eg" target="_blank"> Ministry of Tourism Egypt  </a> 
+         |
+         <a style="cursor: text; color: white;"> Zamalek head office 3 El Adel Abou Bakr St., Zamalek , Cairo </a> 
+         |
+         <a href="https://egymonuments.gov.eg" target="_blank"> egymonuments.gov.eg  </a> 
+        </div>
+  
+        <div class="social-icons">
+          <a class="social-icon social-icon--facebook" href="https://www.facebook.com/khaled.wbas.56" target="_blank">
+            <i class="fa fa-facebook"></i>
+            <div class="tooltip">Facebook</div>
+          </a>
+          <a class="social-icon social-icon--twitter" href="https://twitter.com/khaled_garawin" target="_blank">
+            <i class="fa fa-twitter"></i>
+            <div class="tooltip">Twitter</div>
+          </a>
+          <a class="social-icon social-icon--github" href="https://github.com/LoDaAa" target="_blank">
+            <i class="fa fa-github"></i>
+            <div class="tooltip">Github</div>
+          </a>
+          <a class="social-icon social-icon--instagram" href="https://www.instagram.com/khldwleedd/" target="_blank">
+            <i class="fa fa-instagram"></i>
+            <div class="tooltip">Instagram</div>
+          </a>
+          <a class="social-icon social-icon--linkedin" href="https://www.linkedin.com/in/khaled-garaween-557181169/" target="_blank">
+            <i class="fa fa-linkedin"></i>
+            <div class="tooltip">LinkedIn</div>
+          </a>
+        </div>
+        
+      </div>
+  </footer>

@@ -1,0 +1,225 @@
+<app-header></app-header>
+<header> </header>
+
+<section style="background: rgb(238, 238, 238);">
+
+<mat-accordion>
+    <mat-expansion-panel> 
+      <mat-expansion-panel-header style="padding: 18px;">
+        <mat-panel-title >
+          Cairo 
+        </mat-panel-title>
+        <mat-panel-description>
+          {{cairoPlaces.length}} Places
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p *ngIf = "cairoPlaces.length === 0"> No places have been added yet. please add some places </p>
+
+      <div class="row"  *ngIf = "cairoPlaces.length != 0"> 
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" *ngFor = "let place of cairoPlaces">
+          <div class="card" style="height:95%">
+            <div class="img-container">
+              <img [src] = "getUrl(place)" class="card-img-top store-img">
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name"> {{ place.title }} </h5>
+                <h5 class="store-item-value"> 
+                  <button class="btn2" [routerLink] = "['/addToYourTrip', place.title.toLowerCase() ]"> READ MORE </button>
+                  </h5>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    </mat-expansion-panel>
+    <mat-expansion-panel >
+      <mat-expansion-panel-header style="padding: 18px;">
+        <mat-panel-title>
+          Alexandria
+        </mat-panel-title>
+        <mat-panel-description>
+          {{alexandriaPlaces.length}} Places
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <p *ngIf = "alexandriaPlaces.length === 0"> No places have been added yet. please add some places </p>
+
+      <div class="row" *ngIf = "alexandriaPlaces.length != 0"> 
+              <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" *ngFor = "let place of alexandriaPlaces">
+                <div class="card" style="height:95%">
+                  <div class="img-container">
+                    <img [src] = "getUrl(place)" class="card-img-top store-img">
+                  </div>
+                  <div class="card-body">
+                    <div class="card-text d-flex justify-content-between text-capitalize">
+                      <h5 id="store-item-name"> {{ place.title }} </h5>
+                      <h5 class="store-item-value"> 
+                        <button class="btn2" [routerLink] = "['/addToYourTrip', place.title.toLowerCase() ]"> READ MORE </button>
+                        </h5>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+    </mat-expansion-panel>
+    <mat-expansion-panel >
+      <mat-expansion-panel-header style="padding: 18px;">
+        <mat-panel-title>
+          Hurghada
+        </mat-panel-title>
+        <mat-panel-description>
+          {{hurghadaPlaces.length}} Places
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <p *ngIf = "hurghadaPlaces.length === 0"> No places have been added yet. please add some places </p>
+
+      <div class="row" *ngIf = "hurghadaPlaces.length != 0"> 
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" *ngFor = "let place of hurghadaPlaces">
+          <div class="card" style="height:95%">
+            <div class="img-container">
+              <img [src] = "getUrl(place)" class="card-img-top store-img">
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name"> {{ place.title }} </h5>
+                <h5 class="store-item-value"> 
+                  <button class="btn2" [routerLink] = "['/addToYourTrip', place.title.toLowerCase() ]"> READ MORE </button>
+                  </h5>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header style="padding: 18px;">
+        <mat-panel-title>
+          Sharm El-Sheikh
+        </mat-panel-title>
+        <mat-panel-description>
+          {{sharmPlaces.length}} Places
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <p *ngIf = "sharmPlaces.length === 0"> No places have been added yet. please add some places </p>
+
+      <div class="row" *ngIf = "sharmPlaces.length != 0"> 
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" *ngFor = "let place of sharmPlaces">
+          <div class="card" style="height:95%">
+            <div class="img-container">
+              <img [src] = "getUrl(place)" class="card-img-top store-img">
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name"> {{ place.title }} </h5>
+                <h5 class="store-item-value"> 
+                  <button class="btn2" [routerLink] = "['/addToYourTrip', place.title.toLowerCase() ]"> READ MORE </button>
+                  </h5>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header style="padding: 18px;">
+        <mat-panel-title>
+         Luxor
+        </mat-panel-title>
+        <mat-panel-description>
+          {{luxorPlaces.length}} Places
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <p *ngIf = "luxorPlaces.length === 0"> No places have been added yet. please add some places </p>
+
+      <div class="row" *ngIf = "luxorPlaces.length != 0"> 
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" *ngFor = "let place of luxorPlaces">
+          <div class="card" style="height:95%">
+            <div class="img-container">
+              <img [src] = "getUrl(place)" class="card-img-top store-img">
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name"> {{ place.title }} </h5>
+                <h5 class="store-item-value"> 
+                  <button class="btn2" [routerLink] = "['/addToYourTrip', place.title.toLowerCase() ]"> READ MORE </button>
+                  </h5>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header style="padding: 18px;">
+        <mat-panel-title>
+          Ancient Cities
+        </mat-panel-title>
+        <mat-panel-description>
+          {{ancientPlaces.length}} Places
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <p *ngIf = "ancientPlaces.length === 0"> No places have been added yet. please add some places </p>
+
+      <div class="row" *ngIf = "ancientPlaces.length != 0"> 
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" *ngFor = "let place of ancientPlaces">
+          <div class="card" style="height:95%">
+            <div class="img-container">
+              <img [src] = "getUrl(place)" class="card-img-top store-img">
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name"> {{ place.title }} </h5>
+                <h5 class="store-item-value"> 
+                  <button class="btn2" [routerLink] = "['/addToYourTrip', place.title.toLowerCase() ]"> READ MORE </button>
+                  </h5>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header style="padding: 18px;">
+        <mat-panel-title>
+          Beaches
+        </mat-panel-title>
+        <mat-panel-description>
+          {{beaches.length}} Places
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <p *ngIf = "beaches.length === 0"> No places have been added yet. please add some places </p>
+
+      <div class="row" *ngIf = "beaches.length != 0"> 
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" *ngFor = "let place of beaches">
+          <div class="card" style="height:95%">
+            <div class="img-container">
+              <img [src] = "getUrl(place)" class="card-img-top store-img">
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name"> {{ place.title }} </h5>
+                <h5 class="store-item-value"> 
+                  <button class="btn2" [routerLink] = "['/addToYourTrip', place.title.toLowerCase() ]"> READ MORE </button>
+                  </h5>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    </mat-expansion-panel>
+  </mat-accordion>  
+
+</section>

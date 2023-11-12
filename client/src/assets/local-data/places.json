@@ -1,0 +1,290 @@
+{
+    "places": [
+        {
+            "placeId": 1,
+            "title": "Pyramids",
+            "imageUrl": "assets/images/Cairo/pyramidsPlace.jpeg"
+        },
+        {
+            "placeId": 2,
+            "title": "Egyptian Museum",
+            "imageUrl": "assets/images/Cairo/museum.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Cairo/azhar.jpeg"
+        },
+        {
+            "placeId": 4,
+            "title": "Saqqara",
+            "imageUrl": "assets/images/Cairo/saqqara.jpeg" 
+        }
+        ,
+        {
+            "placeId": 5,
+            "title": "Khan El-Khalili",
+            "imageUrl": "assets/images/Cairo/khan.jpeg"
+        },
+        {
+            "placeId": 6,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Cairo/citadel.webp"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Cairo/tanis.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Cairo/zamalek.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Cairo/fayoum.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Alexandria/library.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Alexandria/corniche.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Alexandria/FortQaitbey .jpeg" 
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Alexandria/roman2.jpeg" 
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Alexandria/museum.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Alexandria/montazah.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Alexandria/restaurant.jpeg" 
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Alexandria/alamein.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Alexandria/komElShoqafa.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Hurghada/giftun.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Hurghada/gubal.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Hurghada/quadBike.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Hurghada/gota.jpeg" 
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Hurghada/snorkling.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Hurghada/bedouin.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Hurghada/acquarium.jpeg" 
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl":"assets/images/Hurghada/sindbad.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Hurghada/marina.jpeg" 
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Sharm/rasMohamed.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Sharm/shipwreck.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Sharm/jolanda.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Sharm/saint.jpeg" 
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Sharm/sinai.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Sharm/dunraven.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Sharm/canyon.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Sharm/blueHole.png"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Sharm/dahab.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Luxor/karnak.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Luxor/valley.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Luxor/balloon.jpeg" 
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Luxor/temple.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Luxor/hatshepsut'stemple.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Luxor/habu.jpeg" 
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Luxor/morturay.jpeg" 
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Luxor/museum2.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Luxor/flucca.png"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Ancient/memphis.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Ancient/thebes.jpeg" 
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Ancient/amarna.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Ancient/avaris.jpeg" 
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Ancient/thonis.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Ancient/abydos.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Beaches/naamaBay.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Beaches/dahab.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Beaches/elGouna.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Beaches/marsaAlam.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Beaches/somaBay.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Al-Azhar",
+            "imageUrl": "assets/images/Beaches/Mamoura.jpeg"
+        }
+    ]
+}

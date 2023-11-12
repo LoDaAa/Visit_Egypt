@@ -1,0 +1,215 @@
+<app-header></app-header>
+
+<header [ngStyle]="{'background-image': getUrl()}"> </header>
+
+<div class="main">
+
+  <div class="container">
+
+    <div class="row">
+
+    <div class="col-sm-6">
+            <h1> {{ title }}</h1>
+            <p [ngClass]="{'limitTextHeight': isReadMore}">
+              {{ description }}
+            </p>
+            <div class="row">
+                <div class="column">
+                    <button (click)="showText()" class="readMore">
+                        {{ isReadMore ? 'Read More': 'Read Less' }}
+                      </button>
+                </div>
+                <div class="column">
+                    <button (click)="frame.show()">
+                      <i class="fas fa-map-pin"></i>
+                      {{ title }}
+                    </button>
+                </div>
+            </div>
+    </div>
+
+    <div class="col-sm-6">
+       <img [src]="img" style="width: 80%;">
+    </div>
+    
+  </div>
+
+
+<div class="row" style="margin-top: 10px;">
+  <div class="col-sm-12">
+    <div id="divWeatherMain"> 
+      <div *ngIf="WeatherData.isDay" class="weatherWidgetRow">
+          <i class="fas fa-3x fa-sun sun"></i>  
+      </div>   
+      <div *ngIf="!WeatherData.isDay" class="weatherWidgetRow">
+          <i class="fas fa-3x fa-moon moon"></i>  
+      </div>   
+      <div class="weatherWidgetRow cloudDiv">
+          <i class="fas fa-cloud fa-3x cloud"></i>
+      </div>
+      <div class="weatherWidgetRow" style="font-size: 32px;margin-top: 5px;">{{WeatherData.temp_celcius}}°</div>
+      <div class="weatherWidgetRow" style="font-size: 12px;">{{WeatherData.temp_min}}° / {{WeatherData.temp_max}}°</div>
+      <div class="weatherWidgetRow" style="font-size: 12px;">Feels Like: {{WeatherData.temp_feels_like}}°</div>
+      <div class="weatherWidgetRow" style="font-size: 25px;margin-top: 10px;">{{WeatherData.name}}</div>
+      <div class="weatherWidgetRow" style="font-size: 12px;">Humidity: {{WeatherData.main.humidity}}%</div>
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
+
+<div mdbModal #frame="mdbModal" class="modal fade" id="frameModalTop" tabindex="-1" role="dialog"
+   aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+
+    <div *ngIf="title === 'Pyramids'">
+      <iframe width="500" height="500" frameborder="0" src="https://www.bing.com/maps/embed?h=500&w=500&cp=29.974210527236608~31.129775359326686&lvl=16.12015415831484&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
+      </iframe>
+      <div style="white-space: nowrap; text-align: center; width: 500px; padding: 6px 0;">
+         <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=29.974210527236608~31.129775359326686&amp;sty=r&amp;lvl=16.12015415831484&amp;FORM=MBEDLD">View Larger Map</a> &nbsp; | &nbsp;
+         <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=29.974210527236608~31.129775359326686&amp;sty=r&amp;lvl=16.12015415831484&amp;rtp=~pos.29.974210527236608_31.129775359326686____&amp;FORM=MBEDLD">Get Directions</a>
+     </div>
+  </div>
+
+  <div *ngIf="title === 'Egyptian Museum'">
+    <iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=30.047290456754205~31.233629286289215&lvl=18&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
+    </iframe>
+    <div style="white-space: nowrap; text-align: center; width: 500px; padding: 6px 0;">
+       <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=30.047290456754205~31.233629286289215&amp;sty=r&amp;lvl=18&amp;FORM=MBEDLD">View Larger Map</a> &nbsp; | &nbsp;
+       <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=30.047290456754205~31.233629286289215&amp;sty=r&amp;lvl=18&amp;rtp=~pos.30.047290456754205_31.233629286289215____&amp;FORM=MBEDLD">Get Directions</a>
+   </div>
+</div>
+
+<div *ngIf="title === 'Al-Azhar'">
+  <iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=30.047067568173084~31.260802745819092&lvl=16&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
+  </iframe>
+  <div style="white-space: nowrap; text-align: center; width: 500px; padding: 6px 0;">
+     <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=30.047067568173084~31.260802745819092&amp;sty=r&amp;lvl=16&amp;FORM=MBEDLD">View Larger Map</a> &nbsp; | &nbsp;
+     <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=30.047067568173084~31.260802745819092&amp;sty=r&amp;lvl=16&amp;rtp=~pos.30.047067568173084_31.260802745819092____&amp;FORM=MBEDLD">Get Directions</a>
+ </div>
+</div>
+
+<div *ngIf="title === 'Saqqara'">
+  <iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=29.84927724208285~31.232840450574145&lvl=13&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
+  </iframe>
+  <div style="white-space: nowrap; text-align: center; width: 500px; padding: 6px 0;">
+     <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=29.84927724208285~31.232840450574145&amp;sty=r&amp;lvl=13&amp;FORM=MBEDLD">View Larger Map</a> &nbsp; | &nbsp;
+     <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=29.84927724208285~31.232840450574145&amp;sty=r&amp;lvl=13&amp;rtp=~pos.29.84927724208285_31.232840450574145____&amp;FORM=MBEDLD">Get Directions</a>
+ </div>
+</div>
+
+<div *ngIf="title === 'Khan El-Khalili'">
+  <iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=30.047494770846313~31.262218952178955&lvl=15&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
+  </iframe>
+  <div style="white-space: nowrap; text-align: center; width: 500px; padding: 6px 0;">
+     <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=30.047494770846313~31.262218952178955&amp;sty=r&amp;lvl=15&amp;FORM=MBEDLD">View Larger Map</a> &nbsp; | &nbsp;
+     <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=30.047494770846313~31.262218952178955&amp;sty=r&amp;lvl=15&amp;rtp=~pos.30.047494770846313_31.262218952178955____&amp;FORM=MBEDLD">Get Directions</a>
+ </div>
+</div>
+
+<div *ngIf="title === 'Citadel'">
+  <iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=30.022658234698753~31.249773502349854&lvl=16&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
+  </iframe>
+  <div style="white-space: nowrap; text-align: center; width: 500px; padding: 6px 0;">
+     <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=30.022658234698753~31.249773502349854&amp;sty=r&amp;lvl=16&amp;FORM=MBEDLD">View Larger Map</a> &nbsp; | &nbsp;
+     <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=30.022658234698753~31.249773502349854&amp;sty=r&amp;lvl=16&amp;rtp=~pos.30.022658234698753_31.249773502349854____&amp;FORM=MBEDLD">Get Directions</a>
+ </div>
+</div>
+
+<div *ngIf="title === 'Tanis'">
+  <iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=30.95368690526024~31.88001606056264&lvl=15.96350000000093&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
+  </iframe>
+  <div style="white-space: nowrap; text-align: center; width: 500px; padding: 6px 0;">
+     <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=30.95368690526024~31.88001606056264&amp;sty=r&amp;lvl=15.96350000000093&amp;FORM=MBEDLD">View Larger Map</a> &nbsp; | &nbsp;
+     <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=30.95368690526024~31.88001606056264&amp;sty=r&amp;lvl=15.96350000000093&amp;rtp=~pos.30.95368690526024_31.88001606056264____&amp;FORM=MBEDLD">Get Directions</a>
+ </div>
+</div>
+
+<div *ngIf="title === 'Bibliotheca Alexandria'">
+  <iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=31.21050747528468~29.905729293823242&lvl=16&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
+  </iframe>
+  <div style="white-space: nowrap; text-align: center; width: 500px; padding: 6px 0;">
+     <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=31.21050747528468~29.905729293823242&amp;sty=r&amp;lvl=16&amp;FORM=MBEDLD">View Larger Map</a> &nbsp; | &nbsp;
+     <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=31.21050747528468~29.905729293823242&amp;sty=r&amp;lvl=16&amp;rtp=~pos.31.21050747528468_29.905729293823242____&amp;FORM=MBEDLD">Get Directions</a>
+ </div>
+</div>
+
+<div *ngIf="title === 'Fort Qaitbey'">
+  <iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=31.21107638827126~29.907209873199463&lvl=16&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
+  </iframe>
+  <div style="white-space: nowrap; text-align: center; width: 500px; padding: 6px 0;">
+     <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=31.21107638827126~29.907209873199463&amp;sty=r&amp;lvl=16&amp;FORM=MBEDLD">View Larger Map</a> &nbsp; | &nbsp;
+     <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=31.21107638827126~29.907209873199463&amp;sty=r&amp;lvl=16&amp;rtp=~pos.31.21107638827126_29.907209873199463____&amp;FORM=MBEDLD">Get Directions</a>
+ </div>
+</div>
+
+<div *ngIf="title === 'Straits Of Gubal'">
+  <iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=27.25779605649469~33.81166934967041&lvl=15&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
+  </iframe>
+  <div style="white-space: nowrap; text-align: center; width: 500px; padding: 6px 0;">
+     <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=27.25779605649469~33.81166934967041&amp;sty=r&amp;lvl=15&amp;FORM=MBEDLD">View Larger Map</a> &nbsp; | &nbsp;
+     <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=27.25779605649469~33.81166934967041&amp;sty=r&amp;lvl=15&amp;rtp=~pos.27.25779605649469_33.81166934967041____&amp;FORM=MBEDLD">Get Directions</a>
+ </div>
+</div>
+
+<div *ngIf="title === 'Giftun Islands'">
+  <iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=29.887239116393275~31.186237335205078&lvl=14&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
+  </iframe>
+  <div style="white-space: nowrap; text-align: center; width: 500px; padding: 6px 0;">
+     <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=29.887239116393275~31.186237335205078&amp;sty=r&amp;lvl=14&amp;FORM=MBEDLD">View Larger Map</a> &nbsp; | &nbsp;
+     <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=29.887239116393275~31.186237335205078&amp;sty=r&amp;lvl=14&amp;rtp=~pos.29.887239116393275_31.186237335205078____&amp;FORM=MBEDLD">Get Directions</a>
+ </div>
+</div>
+
+<div *ngIf="title === 'Thistlegorm Wreck'">
+  <iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=27.77986038804358~34.16027069091797&lvl=12&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
+  </iframe>
+  <div style="white-space: nowrap; text-align: center; width: 500px; padding: 6px 0;">
+     <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=27.77986038804358~34.16027069091797&amp;sty=r&amp;lvl=12&amp;FORM=MBEDLD">View Larger Map</a> &nbsp; | &nbsp;
+     <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=27.77986038804358~34.16027069091797&amp;sty=r&amp;lvl=12&amp;rtp=~pos.27.77986038804358_34.16027069091797____&amp;FORM=MBEDLD">Get Directions</a>
+ </div>
+</div>
+
+
+<div *ngIf="title === 'Medinet Habu'">
+  <iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=25.7197395504532~32.60037302970886&lvl=16&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
+  </iframe>
+  <div style="white-space: nowrap; text-align: center; width: 500px; padding: 6px 0;">
+     <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=25.7197395504532~32.60037302970886&amp;sty=r&amp;lvl=16&amp;FORM=MBEDLD">View Larger Map</a> &nbsp; | &nbsp;
+     <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=25.7197395504532~32.60037302970886&amp;sty=r&amp;lvl=16&amp;rtp=~pos.25.7197395504532_32.60037302970886____&amp;FORM=MBEDLD">Get Directions</a>
+ </div>
+</div>
+
+<div *ngIf="title === 'Temple Of Karnak'">
+  <iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=25.683921986330873~32.62817144393921&lvl=16&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
+  </iframe>
+  <div style="white-space: nowrap; text-align: center; width: 500px; padding: 6px 0;">
+     <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=25.683921986330873~32.62817144393921&amp;sty=r&amp;lvl=16&amp;FORM=MBEDLD">View Larger Map</a> &nbsp; | &nbsp;
+     <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=25.683921986330873~32.62817144393921&amp;sty=r&amp;lvl=16&amp;rtp=~pos.25.683921986330873_32.62817144393921____&amp;FORM=MBEDLD">Get Directions</a>
+ </div>
+</div>
+
+<div *ngIf="title === 'Thebes City'">
+  <iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=30.247334361433353~31.20169758796692&lvl=16&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
+  </iframe>
+  <div style="white-space: nowrap; text-align: center; width: 500px; padding: 6px 0;">
+     <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=30.247334361433353~31.20169758796692&amp;sty=r&amp;lvl=16&amp;FORM=MBEDLD">View Larger Map</a> &nbsp; | &nbsp;
+     <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=30.247334361433353~31.20169758796692&amp;sty=r&amp;lvl=16&amp;rtp=~pos.30.247334361433353_31.20169758796692____&amp;FORM=MBEDLD">Get Directions</a>
+ </div>
+</div>
+
+<div *ngIf="title === 'El-Gouna Beach'">
+  <iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=27.203342969375484~33.7884521484375&lvl=10&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
+  </iframe>
+  <div style="white-space: nowrap; text-align: center; width: 500px; padding: 6px 0;">
+     <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=27.203342969375484~33.7884521484375&amp;sty=r&amp;lvl=10&amp;FORM=MBEDLD">View Larger Map</a> &nbsp; | &nbsp;
+     <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=27.203342969375484~33.7884521484375&amp;sty=r&amp;lvl=10&amp;rtp=~pos.27.203342969375484_33.7884521484375____&amp;FORM=MBEDLD">Get Directions</a>
+ </div>
+</div>
+
+  </div>
+</div>
+</div>
+

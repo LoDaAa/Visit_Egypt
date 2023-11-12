@@ -1,0 +1,196 @@
+<app-header></app-header>
+
+<header>
+  
+    <div class="banner">
+      <div class="container2">
+        <h2 class="text1"> Ancient Egyptian Cities</h2>
+      </div>
+     </div>
+    
+      <!-- Slider -->
+    
+      <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'" [interval]='3000' style=" width:100% !important; height: 500px !important;">
+        <mdb-carousel-item>
+          <div class="view" style=" width:100% !important; height: 800px !important;">
+          <img class="d-block w-100" src="assets/images/Ancient/pyramids.jpeg" alt="Second slide">
+          <div class="mask rgba-black-light"></div>
+          </div>
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <div class="view" style=" width:100% !important; height: 800px !important;">
+          <img class="d-block w-100" src="assets/images/Ancient/pyramids2.jpeg" alt="Third slide">
+          <div class="mask rgba-black-light"></div>
+          </div>
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <div class="view" style=" width:100% !important; height: 800px !important;">
+          <img class="d-block w-100" src="assets/images/Ancient/statues.jpeg" alt="Third slide">
+          <div class="mask rgba-black-light"></div>
+          </div>
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <div class="view" style=" width:100% !important; height: 800px !important;">
+          <img class="d-block w-100" src="assets/images/Ancient/temple.jpeg" alt="Third slide">
+          <div class="mask rgba-black-light"></div>
+          </div>
+        </mdb-carousel-item>
+       
+      </mdb-carousel>
+    
+    </header>
+
+    <div class="places">
+
+        <h1> <span> Ancient Egyptian Cities </span></h1>
+  
+        <div class="float-container">
+          <div class="float-child">
+            <img src="assets/images/Ancient/memphis.jpeg" #image1  alt="" style="border-radius: 25px;" (click) = zoomIn(image1)>
+            <div id="myModal" class="modal" (click)="zoomOut()">
+              <img class="modal-content" id="img01">
+          </div>
+          </div>
+          <div class="float-child">
+            <div class="text">
+              <h1> Memphis City </h1>
+              <p>
+                The first-ever capital of Egypt was <a>The City Of Memphis  </a> from 2950 BC to 2180 BC during the old and one of the official religious centers as it was the worship center for the holy triad of the creator god of Ptah, his wife Sekhmet and Nefertem. The city of Memphis is located 15 mi south of modern Cairo in lower Egypt.
+                <br><br>
+                The stature of Memphis declined and served as a second capital after the rise of Thebes in <a> The New Kingdom Of Egypt  </a> (15570-1070 BC). After the official capital was transferred to Alexandria in 331 BC and with the rise of Christianity, Memphis was completely abandoned and faded within time. Only a few ruins still exist today like an alabaster Sphinx and statue of <a> Ramses II. </a>Near Memphis lies the ancient city of Giza which holds <a> The Great Pyramids Complex. </a>
+              </p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="float-container1">
+          <div class="float-child1">
+            <img src="assets/images/Ancient/thebes.jpeg" #image2 alt="" style="border-radius: 25px; width: 90%;" (click) = zoomIn(image2)>
+            <div id="myModal" class="modal" (click)="zoomOut()">
+              <img class="modal-content" id="img01">
+          </div>
+          </div>
+          <div class="float-child1">
+            <div class="text2">
+              <h1> Thebes City </h1>
+              <p>
+                The great <a> City Of Thebes  </a> is the most well known in the history of ancient Egypt, it served as the capital of Egypt around 1279 BC during the new kingdom (1570-1070 BC). It is located 675 km (419 mi) south of Cairo on the east bank of the Nile. The city was the center of culture, rule, and religion. The city was called now as the city of the creator god Amun and was also referred to as Thebai by Homer the Greek poet who stated Thebes as the city with a thousand gates. The city was the location for some of the most famous and important <a> Festivals In Ancient Egypt </a> like the festivals of Opet and Shemu.
+                <br><br>
+                Across the history of the new kingdom various pharaohs like Ramsess II who constructed the majestic <a> Abu Simbel temples </a> and Hatshepsut who constructed <a> The Beautiful Hatshepsut Temple </a> both of the pharaohs are buried in the magical <a> Valley of the Kings </a> plus the famous boy <a> King Tutankamun. </a> One of the most famous landmarks in Thebes is the great <a> Karnak Temple </a> the biggest religious ancient house of worship in history and next to it was the enchanting Luxor temple home to the holy triad of Amun, Mut, and Khonsu. Thebes became a world heritage site in 1979 by UNESCO because of the beauty and importance of this place to the history of mankind. 
+              </p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="float-container2">
+          <div class="float-child2">
+            <img src="assets/images/Ancient/amarna.jpeg" #image3 alt="" style="border-radius: 25px; width: 95%;" (click) = zoomIn(image3)>
+            <div id="myModal" class="modal" (click)="zoomOut()">
+              <img class="modal-content" id="img01">
+          </div>
+          </div>
+          <div class="float-child2">
+            <div class="text2">
+              <h1> Amarna City  </h1>
+              <p>
+                One of the most unknown capitals of ancient Egypt is Amarna, it represents the time of the biggest religious conflicts and struggles in ancient Egyptian history. The city was a capital established by <a> Pharaoh Akhenaton </a> (1353-1336 BC) in 1346 BC till his death in 1336 BC the city is located on the east bank of the Nile river about 312 km (194 mi) south of Cairo and 420 (250 mi) north of <a> Luxor. </a>
+                <br><br>
+                Akhenaton ruled Egypt for 20 years where he tried to force a monotheist system, the worship of one god Aten <strong>“The Sun Disk”</strong>  but after his death, his son Tutankhamen became the ruler then he amplified the polytheist system once again. The city was constructed with new forms of architecture called Akhetaten The site is known as Tell el-Amarna due to the Beni Amran tribe who lived in that area. The site holds some of the most beautiful tombs filled with the most mesmerizing inscriptions of the famous Aton the sun disk. 
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="float-container1">
+          <div class="float-child1">
+            <img src="assets/images/Ancient/avaris.jpeg" #image4 alt="" style="border-radius: 25px; width: 100%; margin-left: 20px;" (click) = zoomIn(image4)>
+            <div id="myModal" class="modal" (click)="zoomOut()">
+              <img class="modal-content" id="img01">
+          </div>
+          </div>
+          <div class="float-child1">
+            <div class="text2">
+              <h1>  Avaris City </h1>
+              <p>
+                The city of Avaris used to be the capital of ancient Egypt under the Hyksos between 1783 BC and 1550 BC. It is located in the northeastern region of the Nile delta, it lies today at Tel El-Daba. 
+                <br><br>
+                The city was used as a trade center and an administrative location by the Hyksos and traders.  The site is an important archaeological city as the ruins and artifacts like copper swords and grave goods found in the city are able to tell a great sum of facts and details about the Hyksos culture.
+              </p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="float-container2">
+          <div class="float-child2" style="margin-top: 190px;">
+            <img src="assets/images/Ancient/thonis.jpeg" #image5 alt="" style="border-radius: 25px; width: 80%;" (click) = zoomIn(image5)>
+            <div id="myModal" class="modal" (click)="zoomOut()">
+              <img class="modal-content" id="img01">
+          </div>
+          </div>
+          <div class="float-child2" style="margin-top: 70px;">
+            <div class="text2">
+              <h1> Thonis City </h1>
+              <p>
+                The lost city of Thonis was the capital in the first dynasty before Memphis, it is located near the ancient city of Abydos in Upper Egypt. It severs as a burial ground for the <a> pharaohs </a> of the first three dynasties. The site played an important role in mythology and religious cosmology like heaven which was mentioned in the <a>book of the dead</a>  , it was known that the city held the tomb and mummy of the regional deity of Osiris. This site was the place whereof the first tribal confederation was announced and <a> the unification of Upper Egypt </a> by Menes <a> “Narmer“. </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="float-container1">
+          <div class="float-child1" style="margin-top: -20px;">
+            <img src="assets/images/Ancient/abydos.jpeg" #image6 alt="" style="border-radius: 25px; width: 90%; margin-top: 260px;" (click) = zoomIn(image6)>
+            <div id="myModal" class="modal" (click)="zoomOut()">
+              <img class="modal-content" id="img01">
+          </div>
+          </div>
+          <div class="float-child1" style="margin-top: 70px;  margin-right: 30px;">
+            <div class="text2">
+              <h1> Abydos City </h1>
+              <p>
+                The city of Abydos was a place of high importance as it was known as the mythical burial place of Osiris and the home of his cult and. It is located in Upper Egypt and considered by far one of the most important archeological sites in Egypt. The city goes back to the time of the first dynasty more than 4500 years ago or even further. The site was used as a burial ground for the king of the first and second dynasties as the first pharaoh Narmer <strong> ‘ Menes‘ </strong> the founder of the first dynasty is buried in the <a> temples of Abydos. </a> The site was also a location where the Abydos Boats were constructed.
+                <br><br>
+                The city of Abydos holds the great Osiris temple one of the oldest and the iconic construction in ancient Egyptian history. The temple of Seti I is the gem of Abydos as it is a highly beautiful and significant temple, it contains the Abydos King list which holds the names of many kings of the first and second dynasties which helped archeologist and historians to fully understand the ancient Egyptian history in the right manner. It was a favorite burial place for many kings and queens of the old kingdom.
+              </p>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+
+      <footer>
+        <div class="footerStuff">
+    
+          <div class="footerItem">
+           <a href="https://egymonuments.gov.eg" target="_blank"> Ministry of Tourism Egypt  </a> 
+           |
+           <a style="cursor: text; color: white;"> Zamalek head office 3 El Adel Abou Bakr St., Zamalek , Cairo </a> 
+           |
+           <a href="https://egymonuments.gov.eg" target="_blank"> egymonuments.gov.eg  </a> 
+          </div>
+    
+          <div class="social-icons">
+            <a class="social-icon social-icon--facebook" href="https://www.facebook.com/khaled.wbas.56" target="_blank">
+              <i class="fa fa-facebook"></i>
+              <div class="tooltip">Facebook</div>
+            </a>
+            <a class="social-icon social-icon--twitter" href="https://twitter.com/khaled_garawin" target="_blank">
+              <i class="fa fa-twitter"></i>
+              <div class="tooltip">Twitter</div>
+            </a>
+            <a class="social-icon social-icon--github" href="https://github.com/LoDaAa" target="_blank">
+              <i class="fa fa-github"></i>
+              <div class="tooltip">Github</div>
+            </a>
+            <a class="social-icon social-icon--instagram" href="https://www.instagram.com/khldwleedd/" target="_blank">
+              <i class="fa fa-instagram"></i>
+              <div class="tooltip">Instagram</div>
+            </a>
+            <a class="social-icon social-icon--linkedin" href="https://www.linkedin.com/in/khaled-garaween-557181169/" target="_blank">
+              <i class="fa fa-linkedin"></i>
+              <div class="tooltip">LinkedIn</div>
+            </a>
+          </div>
+          
+        </div>
+    </footer>

@@ -1,0 +1,51 @@
+{
+    "luxorplaces" : [
+        {
+            "placeId": 1,
+            "title": "Temple of Karnak",
+            "imageUrl": "assets/images/Luxor/karnak.jpeg",
+            "param" : "templeOfKarnak"
+        },
+        {
+            "placeId": 2,
+            "title": "Valley of the Kings",
+            "imageUrl": "assets/images/Luxor/valley.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Hot Air Balloon Ride over Luxor at Sunrise",
+            "imageUrl": "assets/images/Luxor/balloon.jpeg" 
+        },
+        {
+            "placeId": 4,
+            "title": "Luxor Temple",
+            "imageUrl": "assets/images/Luxor/temple.jpeg"
+        },
+        {
+            "placeId": 5,
+            "title": "Temple of Deir al-Bahri (Queen Hatshepsut's Temple)",
+            "imageUrl": "assets/images/Luxor/hatshepsut'stemple.jpeg"
+        },
+        {
+            "placeId": 6,
+            "title": "Medinet Habu",
+            "imageUrl": "assets/images/Luxor/habu.jpeg",
+            "param":"medinetHabu"
+        },
+        {
+            "placeId": 7,
+            "title": "Mortuary Temple of Seti I",
+            "imageUrl": "assets/images/Luxor/morturay.jpeg" 
+        },
+        {
+            "placeId": 8,
+            "title": "Luxor Museum",
+            "imageUrl": "assets/images/Luxor/museum2.jpeg"
+        },
+        {
+            "placeId": 9,
+            "title": "Felucca Ride to Banana Island",
+            "imageUrl": "assets/images/Luxor/flucca.png"
+        }
+    ]
+}

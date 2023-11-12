@@ -1,0 +1,232 @@
+<app-header></app-header>
+
+<header>
+  
+    <div class="banner">
+      <div class="container2">
+        <h2 class="text1"> Egyptian Beaches</h2>
+      </div>
+     </div>
+    
+      <!-- Slider -->
+    
+      <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'" [interval]='3000' style=" width:100% !important; height: 500px !important;">
+        <mdb-carousel-item>
+          <div class="view" style=" width:100% !important; height: 800px !important;">
+          <img class="d-block w-100" src="assets/images/Beaches/beach.jpeg" alt="Second slide">
+          <div class="mask rgba-black-light"></div>
+          </div>
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <div class="view" style=" width:100% !important; height: 800px !important;">
+          <img class="d-block w-100" src="assets/images/Beaches/beach1.jpeg" alt="Third slide">
+          <div class="mask rgba-black-light"></div>
+          </div>
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <div class="view" style=" width:100% !important; height: 800px !important;">
+          <img class="d-block w-100" src="assets/images/Beaches/beach2.jpeg" alt="Third slide">
+          <div class="mask rgba-black-light"></div>
+          </div>
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <div class="view" style=" width:100% !important; height: 800px !important;">
+          <img class="d-block w-100" src="assets/images/Beaches/beach3.jpeg" alt="Third slide">
+          <div class="mask rgba-black-light"></div>
+          </div>
+        </mdb-carousel-item>
+       
+      </mdb-carousel>
+    
+    </header>
+
+    <div class="places">
+
+        <h1> <span> Egyptian Beachecs </span></h1>
+  
+        <div class="float-container">
+          <div class="float-child">
+            <img src="assets/images/Beaches/naamaBay.jpeg" #image1  alt="Naama Bay Beach" style="border-radius: 25px; width: 100%;" (click) = zoomIn(image1)>
+            <div id="myModal" class="modal" (click)="zoomOut()">
+              <img class="modal-content" id="img01">
+          </div>
+          </div>
+          <div class="float-child">
+            <div class="text">
+              <h1> Naama Bay </h1>
+              <p>
+                One of Egypt's most famous sandy strips, Naama Bay's scoop of white-sand beach sits at the epicenter of Egypt's prime beach resort,<strong> Sharm el-Sheikh </strong>  , on the Sinai Peninsula.
+                <br><br>
+                Sun seekers from across Northern and Eastern Europe decamp here during the winter months to loll on sand lapped by the calm, aqua-blue waters of the Gulf of Aqaba and gaze out at the dusky jagged silhouette of Saudi Arabia's mountainous coastline in the distance.
+                <br><br>
+                Before the beachgoers beelined here in vast numbers, Sharm el-Sheikh was already known for its <strong>scuba diving</strong> , with a multitude of coral reefs, including the world-class dive sites of Ras Mohammed National Park, within easy reach. Today, this makes it Egypt's top choice for a beach break with added underwater action. Both complete beginners and more experienced divers will find plenty of dive trips that cater to their level.
+                <br><br>
+                You can snorkel just off Naama Bay itself, though more colorful reefs need to be accessed by boat. Behind the beach is Sharm el-Sheikh's lively, main resort area, with plenty of restaurants and cafés, as well as accommodation ranging from large resorts like the <a> Movenpick Sharm El Sheikh </a>, which sits on the northern clifftop overlooking the bay, to cozy midrange hotels such as <a> Oonas Dive Club </a>, with its friendly, family-run feel.
+              </p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="float-container1">
+          <div class="float-child1">
+            <img src="assets/images/Beaches/dahab.jpeg" #image2  alt="Dahab Lagoon Beach" style="border-radius: 25px; width: 100%;" (click) = zoomIn(image2)>
+            <div id="myModal" class="modal" (click)="zoomOut()">
+              <img class="modal-content" id="img01">
+          </div>
+          </div>
+          <div class="float-child1" style="margin-right: 20px;">
+            <div class="text2">
+              <h1> Dahab Lagoon </h1>
+              <p>
+                First things first. Despite being perched along South Sinai's shoreline, central Dahab doesn't have much of a beach. The coastal strip here is mostly rock rather than sand. For an actual beach, head just to the south of the center to the sheltered bay known as Dahab Lagoon. This curved strip of golden sand edges the bay, backed by the craggy red-hued Sinai Mountain Range.
+                <br><br>
+                While Dahab remains best known for its scuba diving opportunities (it is <strong> Egypt's top destination for learning to dive </strong>) and its backpacker-friendly choice of accommodation, the Lagoon area concentrates more on travelers who simply want to sloth out on the sand. It's home to Dahab's most luxurious places to stay, including the contemporary-styled <a> Le Meridien Dahab Resort.</a>
+                <br><br>
+                If you do want to mix up your holiday with some more active pursuits though, don't worry. The Lagoon hotels all offer dive trips, and the Lagoon's beach is also a major kitesurfing destination, with water sports operators offering both equipment hire and week-long lesson packages.
+                <br><br>
+                Off the beach, Dahab is a great destination for those looking for a more casual and local vacation scene. The central area is packed with cafés and restaurants built on the rocks that line the shorefront, and there are plenty of travel agencies specializing in excursions out into the desert beyond the beach, from camel rides and Bedouin dinners to ATV tours and jeep safaris.
+             </p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="float-container2">
+          <div class="float-child2">
+            <img src="assets/images/Beaches/elGouna.jpeg" #image3 alt="El Gouna Beach" style="border-radius: 25px; width: 100%;" (click) = zoomIn(image3)>
+            <div id="myModal" class="modal" (click)="zoomOut()">
+              <img class="modal-content" id="img01">
+          </div>
+          </div>
+          <div class="float-child2" style="margin-left: 30px;">
+            <div class="text2">
+              <h1> El Gouna  </h1>
+              <p>
+                The purpose-built beach town of El Gouna, <strong> 27 kilometers north of Hurghada </strong> , was made for easygoing, family-friendly sun-and-sand vacations. El Gouna is dedicated to resort-style holidays that offer plenty of diversions off the beach for those who want to do more than soak up the sun, with stand up paddleboarding, kayaking, horse riding, and desert ATV tours all available, along with an 18-hole golf course.
+                <br><br>
+                There are four main beach areas, including the wide swath of Mangroovy Beach, which is El Gouna's kitesurfing central, and the soft white sand of Zeytouna Beach, with its 400-meter-long jetty allowing you to stroll out to the deeper water where the coral reefs lie to conserve your energy for snorkeling.
+                <br><br>
+                Most of the hotels here are large, low-slung resorts surrounded by mature gardens of palm trees that lead out to the beach, such as the <a> Sheraton Miramar Resort </a> , though there's a couple of smaller midrange options that focus on attracting visitors who've come here purely to kitesurf.    
+            </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="float-container1">
+          <div class="float-child1">
+            <img src="assets/images/Beaches/marsaAlam.jpeg" #image4 alt="" style="border-radius: 25px; width: 90%; margin-left: 20px;" (click) = zoomIn(image4)>
+            <div id="myModal" class="modal" (click)="zoomOut()">
+              <img class="modal-content" id="img01">
+          </div>
+          </div>
+          <div class="float-child1">
+            <div class="text2">
+              <h1>  Marsa Alam </h1>
+              <p>
+                Marsa Alam, in the far south of Egypt's rambling Red Sea coastline (<strong> 289 kilometers south of Hurghada </strong>), was the beach destination divers whispered about for years. While Hurghada, to the north, and Sharm el-Sheikh, on the Sinai Peninsula, became booming diving hot spots, regularly featuring on top ten lists for diving worldwide, Marsa Alam remained an obscure destination little known outside the diving community.
+                <br><br>
+                The secret, though, is now firmly out, and the resorts have moved in to develop this long strip of coastline. For experienced divers, Marsa Alam is the best base to access the astonishing kaleidoscope-colored reefs of the Red Sea's far south, but the hotels now hugging the shore have snapped up the strips of white sand, meaning a vacation in Marsa Alam can now combine sun-lounging in resort comfort as well as diving.              </p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="float-container2">
+          <div class="float-child2" style="margin-top: 90px;">
+            <img src="assets/images/Beaches/somaBay.jpeg" #image5 alt="Soma Bay" style="border-radius: 25px; width: 100%;" (click) = zoomIn(image5)>
+            <div id="myModal" class="modal" (click)="zoomOut()">
+              <img class="modal-content" id="img01">
+          </div>
+          </div>
+          <div class="float-child2" style="margin-top: 70px; margin-left: 30px;">
+            <div class="text2">
+              <h1> Soma Bay </h1>
+              <p>
+                One of the most exclusive beaches in Egypt, the wide stretch of Soma Bay's white sand is backed by just five resort <strong> hotels dedicated to an all-inclusive </strong> , luxurious beach holiday experience, far away from any town bustle. The beach is only steps away from whichever resort you choose to stay at, meaning vacations here are all about serious relaxation and sandy bliss.
+                <br><br>
+                With Hurghada 61 kilometers to the north, this is not the place to come if you like to pop into town, but beachgoers here still have plenty of options if they do feel like spending some time off the sand.
+                <br><br>
+                Traveling families are well catered for, with plenty of regular entertainment events focused on kids, and the resorts have a full array of facilities, including water sports offices, which offer kitesurfing lessons, stand up paddleboarding, and diving and snorkeling boat trips.
+                <br><br>                
+             </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="float-container1">
+          <div class="float-child1">
+            <img src="assets/images/Beaches/Mamoura.jpeg" #image6 alt="Mamoura Beach" style="border-radius: 25px; width: 90%;" (click) = zoomIn(image6)>
+            <div id="myModal" class="modal" (click)="zoomOut()">
+              <img class="modal-content" id="img01">
+          </div>
+          </div>
+          <div class="float-child1" style="margin-right: 20px;">
+            <div class="text2">
+              <h1> Mamoura Beach </h1>
+              <p>
+                For most international visitors, <strong>Alexandria </strong>  is a prime historical destination rather than a beach town, but Egyptians decamp here in huge numbers every summer, not for the museums or catacombs but for their beach vacation.
+                <br><br> 
+                The city, which sprawls across the coastline, is fronted by various small pockets of sand, most of which are crammed to the rafters with beachgoers during July and August. The best piece of sand is Mamoura Beach on the eastern side of town, which has both a public strip of beach and a private beach.
+                <br><br> 
+                There's a nominal entrance fee to the public beach, and a higher ticket price to access the private segment, which is worth paying for, as it's less crowded and more groomed.              </p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="float-container2">
+            <div class="float-child2" style="margin-top: 70px;">
+              <img src="assets/images/Beaches/cleopatra.jpeg" #image7 alt="" style="border-radius: 25px; width: 90%;" (click) = zoomIn(image7)>
+              <div id="myModal" class="modal" (click)="zoomOut()">
+                <img class="modal-content" id="img01">
+            </div>
+            </div>
+            <div class="float-child2" style="margin-top: 70px;">
+              <div class="text2">
+                <h1> Cleopatra's Beach </h1>
+                <p>
+                    Marsa Matruh isn't on many foreign visitor radars as a vacation destination, but this town, sitting on the western edge of Egypt's Mediterranean shore, gets packed with local tourists during the summer months.
+                    <br><br> 
+                    The town itself is nondescript and rather scruffy, but the surrounding coastline is home to great beaches. The pick of the bunch is Cleopatra's Beach, sitting at the tip of Marsa Matruh's thin peninsula.
+                    <br><br> 
+                    The beach is <strong> famous for a local myth that Cleopatra and Mark Antony once bathed here </strong> in a sheltered natural pool between the rocks, known as Cleopatra's Bath. Today you, too, can soak up the regal connotations and take a dip in the pool.              
+               </p>
+              </div>
+            </div>
+          </div>
+
+      </div>
+
+      <footer>
+        <div class="footerStuff">
+    
+          <div class="footerItem">
+           <a href="https://egymonuments.gov.eg" target="_blank"> Ministry of Tourism Egypt  </a> 
+           |
+           <a style="cursor: text; color: white;"> Zamalek head office 3 El Adel Abou Bakr St., Zamalek , Cairo </a> 
+           |
+           <a href="https://egymonuments.gov.eg" target="_blank"> egymonuments.gov.eg  </a> 
+          </div>
+    
+          <div class="social-icons">
+            <a class="social-icon social-icon--facebook" href="https://www.facebook.com/khaled.wbas.56" target="_blank">
+              <i class="fa fa-facebook"></i>
+              <div class="tooltip">Facebook</div>
+            </a>
+            <a class="social-icon social-icon--twitter" href="https://twitter.com/khaled_garawin" target="_blank">
+              <i class="fa fa-twitter"></i>
+              <div class="tooltip">Twitter</div>
+            </a>
+            <a class="social-icon social-icon--github" href="https://github.com/LoDaAa" target="_blank">
+              <i class="fa fa-github"></i>
+              <div class="tooltip">Github</div>
+            </a>
+            <a class="social-icon social-icon--instagram" href="https://www.instagram.com/khldwleedd/" target="_blank">
+              <i class="fa fa-instagram"></i>
+              <div class="tooltip">Instagram</div>
+            </a>
+            <a class="social-icon social-icon--linkedin" href="https://www.linkedin.com/in/khaled-garaween-557181169/" target="_blank">
+              <i class="fa fa-linkedin"></i>
+              <div class="tooltip">LinkedIn</div>
+            </a>
+          </div>
+          
+        </div>
+    </footer>

@@ -1,0 +1,51 @@
+{
+    "alexplaces": [
+        {
+            "placeId": 1,
+            "title": "Bibliotheca Alexandria",
+            "imageUrl": "assets/images/Alexandria/library.jpeg",
+            "param" : "bibliothecaAlexandria"
+        },
+        {
+            "placeId": 2,
+            "title": "Stroll the Corniche",
+            "imageUrl": "assets/images/Alexandria/corniche.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "Fort Qaitbey",
+            "imageUrl": "assets/images/Alexandria/FortQaitbey .jpeg",
+            "param" : "fortQaitbey"
+        },
+        {
+            "placeId": 4,
+            "title": "Kom el-Dikka",
+            "imageUrl": "assets/images/Alexandria/roman2.jpeg" 
+        },
+        {
+            "placeId": 5,
+            "title": "Alexandria National Museum",
+            "imageUrl": "assets/images/Alexandria/museum.jpeg"
+        },
+        {
+            "placeId": 6,
+            "title": "Montazah Gardens",
+            "imageUrl": "assets/images/Alexandria/montazah.jpeg"
+        },
+        {
+            "placeId": 7,
+            "title": "Alexandria's Fish Restaurants",
+            "imageUrl": "assets/images/Alexandria/restaurant.jpeg" 
+        },
+        {
+            "placeId": 8,
+            "title": "El Alamein War Memorials",
+            "imageUrl": "assets/images/Alexandria/alamein.jpeg"
+        },
+        {
+            "placeId": 9,
+            "title": "Head Underground at the Catacombs of Kom el-Shoqafa",
+            "imageUrl": "assets/images/Alexandria/komElShoqafa.jpeg"
+        }
+    ]
+}

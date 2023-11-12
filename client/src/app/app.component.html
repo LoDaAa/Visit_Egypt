@@ -1,0 +1,8 @@
+<div class="loader" *ngIf="preloading">
+    <div class="image">
+      <i class="fa fa-fighter-jet fa-2x"></i>
+    </div>
+    <span></span>
+  </div>
+
+<router-outlet  *ngIf="!preloading"></router-outlet>

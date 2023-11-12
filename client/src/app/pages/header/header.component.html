@@ -1,0 +1,77 @@
+<nav class="navbar navbar-expand-sm fixed-top navbar-light">
+        <a class="navbar-brand" href="#">
+            <img class="logo" src="assets/images/egyptHeader-removebg-preview.png" width="130" alt="Egypt Logo">
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="menu">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink = "/aboutEgypt" routerLinkActive = "activeLink" [ngStyle]="{'width': variable2 ? '120%' : '100%'}" > {{ 'AboutEgypt' | translate }} </a> 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink = "/placesToGo" routerLinkActive = "activeLink" [ngStyle]="{'width': variable2 ? '120%' : '100%'}" > {{ 'PlacesToGo'  | translate }} </a> 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink = "/planYourTrip" routerLinkActive = "activeLink" [ngStyle]="{'width': variable2 ? '120%' : '100%'}" > {{ 'PlanYourTrip'  | translate }}</a> 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink = "/keyInformation" routerLinkActive = "activeLink"  > {{ 'KeyInformation' | translate }} </a> 
+                    </li>
+                      <li class="nav-item">
+                        <a class="nav-link" routerLink = "/experience" routerLinkActive = "activeLink"> {{ 'Experience'  | translate }} </a>
+                    </li>
+                  </ul>
+            </div>
+            <div class="rightPart"> 
+                <div class="login" *ngIf = "!_authService.getAccessToken()">
+                    <a data-toggle="modal" data-target="#basicExample"
+                    (click)="frame.show()" mdbBtn color="info" outline="true">
+                   {{ 'Login' | translate }}
+                     </a>
+                </div>
+                <div>
+                  <li class="nav-item dropdown"  *ngIf = "_authService.getAccessToken()"> 
+                    <a class="nav-link"> 
+                      <img [src]="imageUrl" width="40" height="40" class="rounded-circle" alt="">
+                      </a>
+                  <ul class="dropdown-menu" style = "right: 0; left: auto; text-align: center;">
+                    <a class="dropdown-item" routerLink = "/profile">
+                      <span>
+                        <img style="border-radius: 30% !important; width: 70px; margin: 20px;" [src]="imageUrl">
+                      </span>
+                     {{ userName }}  
+                    </a> 
+                    <hr class="dropdown-divider">
+                    <a class="dropdown-item" (click) = "_authService.logout()" routerLinkActive = "active"> {{ 'LogOut' | translate }}</a>
+                  </ul>
+                </li>
+                </div>
+                <div class="langDropDown">
+                    <select (change)="useLanguage(mySelect.value)" [(ngModel)] = "selectedLang" #mySelect>
+                      <option value="en"> English </option>
+                      <option value="nl"> Deutsch </option>
+                      <option value="hu"> Magyar </option>
+                    </select>
+                  </div>
+                  <div class="addToYourTrip" (click) = "routeAddToYourTrip()">
+                    <span title="Add to your trip">
+                      <i class="fas fa-suitcase fa-2x" style="color: white;"></i>
+                      <span class='badge badge-warning' id='lblCartCount'> {{ noOfPlaces }} </span>
+                    </span>
+                  </div>
+            </div>
+        </div>
+  </nav>
+
+  <div mdbModal #frame="mdbModal" class="modal fade" id="frameModalTop" tabindex="-1" role="dialog"
+   aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <app-login [frame]="frame"> </app-login>
+  </div>
+</div>
+</div>

@@ -1,0 +1,276 @@
+<app-header></app-header>
+
+<header>
+  
+    <div class="banner">
+      <div class="container2">
+        <h2 class="text1"> Luxor </h2>
+      </div>
+      <div class="button">
+        <a class="btn2">
+         Explore Places To Visit In Luxor 
+       </a>
+     </div>
+     </div>
+    
+      <!-- Slider -->
+    
+      <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'" [interval]='3000' style=" width:100% !important; height: 500px !important;">
+        <mdb-carousel-item>
+          <div class="view" style=" width:100% !important; height: 800px !important;">
+          <img class="d-block w-100" src="assets/images/Luxor/luxorBack.jpeg" alt="Second slide">
+          <div class="mask rgba-black-light"></div>
+          </div>
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <div class="view" style=" width:100% !important; height: 800px !important;">
+          <img class="d-block w-100" src="assets/images/Luxor/luxorBack2.webp" alt="Third slide">
+          <div class="mask rgba-black-light"></div>
+          </div>
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <div class="view" style=" width:100% !important; height: 800px !important;">
+          <img class="d-block w-100" src="assets/images/Luxor/luxorBack3.jpeg" alt="Third slide">
+          <div class="mask rgba-black-light"></div>
+          </div>
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <div class="view" style=" width:100% !important; height: 800px !important;">
+          <img class="d-block w-100" src="assets/images/Luxor/luxorBack4.jpeg" alt="Third slide">
+          <div class="mask rgba-black-light"></div>
+          </div>
+        </mdb-carousel-item>
+       
+      </mdb-carousel>
+    
+    </header>
+
+    <div class="places">
+
+      <h1> <span> Places To Go In Luxor </span></h1>
+
+      <div class="float-container">
+        <div class="float-child" style="margin-top: 90px;">
+          <img src="assets/images/Luxor/karnak.jpeg" #image1  alt="Temple of Karnak" style="border-radius: 25px; width: 100%;" (click) = zoomIn(image1)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child" style="margin-top: -50px;">
+          <div class="text">
+            <h1> Temple of Karnak </h1>
+            <p>
+              Of Luxor's many monuments, the Temple Complex of Karnak has to be its most astonishing and beautiful feat.
+              <br><br>
+              Within its precincts are the  <a> Great Temple of Amun </a> , the <Strong> Temple of Khons </Strong> , and the <strong> Festival Temple of Tuthmosis III </strong> , as well as surrounding minor temples and sanctuaries.
+              <br><br>
+              The complex is not built to a single unified plan. Instead, it represents the building activity of many successive rulers, who vied with one another in adding to and adorning this great national sanctuary, which became the most important of Egypt's temples during the New Kingdom.
+            </p>  
+          </div>
+        </div>
+      </div>
+
+      <div class="float-container1">
+        <div class="float-child1">
+          <img src="assets/images/Luxor/valley.jpeg" #image2 alt="Valley of the Kings" style="border-radius: 25px; width: 100%; margin-top: 10px;" (click) = zoomIn(image2)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child1" style="margin-right: 30px; margin-top: 20px;">
+          <div class="text2">
+            <h1> Valley of the Kings </h1>
+            <p>
+              Hidden between the rocky escarpments of Luxor's west bank, the Valley of the Kings was the final resting place for the kings of the 18th, 19th, and 20th dynasties.
+              <br><br>
+              Covered in intricately detailed, vibrant wall-paintings, the tombs are normally every visitor's number-one stop on a West Bank visit.
+              <br><br>
+              Since it was believed that the dead, accompanied by the sun god (or perhaps having become one with the sun god) sailed through the underworld at night in a boat, the walls of the tombs were adorned with texts and scenes depicting this voyage and giving the dead instruction on its course.
+              <br><br>
+              Within the valley are 63 tombs, which are a roll-call of famous names of Egyptian history, including the famous boy-king <strong> Tutankhamun</strong>.
+              <br><br>
+              The tombs are open on a rotation system to preserve the paintings as much as possible from the damage caused by humidity. Head here first thing in the morning (the site opens at 6am) to see them completely without the crowds.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-container2">
+        <div class="float-child2">
+          <img src="assets/images/Luxor/balloon.jpeg" #image3 alt="Hot Air Balloon Ride over Luxor at Sunrise" style="border-radius: 25px; width: 95%; margin-top:50px;" (click) = zoomIn(image3)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child2" style="margin-top: 70px;">
+          <div class="text2">
+            <h1> Hot Air Balloon Ride over Luxor at Sunrise </h1>
+            <p>
+              Early birds willing to roll out of bed while it's still dark are rewarded with a bird's-eye view of the West Bank on a dawn hot-air balloon ride.
+              <br><br>
+              Balloon rides here take off just after sunrise and float over the West Bank, with its green farming fields tucked between the barren escarpments, viewing the area's temples and tomb sites from high above.
+              <br><br>
+             <strong> Flight time is usually around 45 minutes, </strong> though expect the<a> hot-air balloon tour  </a> experience to take around three hours from pickup at your hotel to being dropped back there.
+              <br><br>
+              There are a variety of operators in town. Balloon group tours generally use larger baskets taking around 24 passengers plus pilot.
+              </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="float-container1">
+        <div class="float-child1" style="margin-top: 180px !important;">
+          <img src="assets/images/Luxor/temple.jpeg" #image4 alt=" Luxor Temple" style="border-radius: 25px; width: 100%;" (click) = zoomIn(image4)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child1" style="margin-right: 30px;">
+          <div class="text2">
+            <h1> Luxor Temple </h1>
+            <p>
+              Presiding over the modern downtown district, Luxor Temple is an ode to the changing face of Egypt through the centuries.
+              <br><br>
+              Built first by Amenophis III (on the site of an earlier sandstone temple), it was known as "the southern harem of Amun" and was dedicated to Amun, his consort Mut, and their son the moon god Khons.
+              <br><br>
+              Like all Egyptian temples, it comprises the chapels of the deities, with their vestibules and subsidiary chambers; a large<strong> Hypostyle Hall; </strong>  and an open <strong> Peristyle Court, </strong> which was approached from the north by a great colonnade.
+              <br><br>
+              The temple was added to and changed by a parade of pharaohs, including Amenophis IV (who obliterated all references to the god Amun within the temple and added the Sanctuary of the god Aten), Tutankhamun (who had the walls of the colonnade embellished with reliefs and in turn destroyed the Temple of the Aten), Seti I (who restored the reliefs of Amun), and Ramses II (who extended the temple significantly, adding a new colonnaded court at the north end).
+              <br><br>
+              During the Christian era, the temple underwent a transformation into a church, while in the Islamic period,<strong> the Mosque of Abu el-Haggag, </strong>  dedicated to a revered holy man, was built inside the complex grounds.
+              </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-container2">
+        <div class="float-child2">
+          <img src="assets/images/Luxor/hatshepsut'stemple.jpeg" #image5 alt="Temple of Deir al-Bahri (Queen Hatshepsut's Temple)" style="border-radius: 25px; width: 95%; margin-top: 60px;" (click) = zoomIn(image5)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child2" style="margin-top: 75px;">
+          <div class="text2">
+            <h1> Temple of Deir al-Bahri (Queen Hatshepsut's Temple) </h1>
+            <p>
+              The Temple of Deir el-Bahri is magnificently situated on the West Bank, at the foot of the sheer cliffs fringing the desert hills, the light-colored, almost white, sandstone of the temple standing out prominently against the golden yellow to light brown rocks behind.
+              <br><br>
+              The temple complex is laid out on three terraces rising from the plain, linked by ramps, which divide it into a northern and a southern half. Along the west side of each terrace is a raised colonnade.
+              <br><br>
+              The terraces were hewn out of the eastern slopes of the hills, with retaining walls of the finest sandstone along the sides and to the rear. The temple itself was also partly hewn from the rock.
+              <br><br>
+              Inside, the complex is richly adorned with statues, reliefs, and inscriptions. Note how Queen Hatshepsut had herself represented with the attributes of a male pharaoh (beard and short apron) to demonstrate that she possessed all the authority of a king.
+              </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-container1">
+        <div class="float-child1">
+          <img src="assets/images/Luxor/habu.jpeg" #image6 alt="Medinet Habu " style="border-radius: 25px; width: 90%; margin-top: 80px; margin-left: 30px;" (click) = zoomIn(image6)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child1">
+          <div class="text2">
+            <h1> Medinet Habu  </h1>
+            <p>
+              With the famous Valley of the Kings and Temple of Deir al-Bahri the main attractions, Medinet Habu often gets overlooked on a West Bank trip, but this is one of Egypt's most beautifully decorated temples and should be on everyone's West Bank hit list.
+              <br><br>
+              The complex consists of a small, older temple built during the 18th dynasty and enlarged in the Late Period, and the great Temple of Ramses III, associated with a royal palace, which was surrounded by a battlemented enclosure wall four meters high.
+              <br><br>
+              The main temple area was built exactly on the model of the Ramesseum and, like the Ramesseum, was dedicated to Amun. The reliefs here are some of the best you'll see on the West Bank.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-container2">
+        <div class="float-child2">
+          <img src="assets/images/Luxor/morturay.jpeg" #image7 alt="Mortuary Temple of Seti I" style="border-radius: 25px; width: 90%;" (click) = zoomIn(image7)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child2" style="margin-top: 70px;">
+          <div class="text2">
+            <h1> Mortuary Temple of Seti I </h1>
+            <p>
+              The Mortuary Temple of Seti I, on Luxor's West Bank, is dedicated to Amun and to the cult of the king's father Ramses I.
+              <br><br>
+              Left unfinished by Seti I, it was adorned by Ramses II with reliefs and inscriptions, which vie in quality with the contemporary work at <A>Abydos </A>.
+              <br><br>
+              The temple was originally 158 meters long, but all that now remains is the sanctuary, with its various halls and chambers and some scanty fragments of the courts and pylons.
+              <br><br>
+              For those travelers interested in ancient Egyptian decorative work, the temple's <strong> Hypostyle Hall </strong> contains some excellent examples of reliefs.
+              <br><br>
+              On the roof slabs over the central aisle are the winged solar disc; flying vultures; and the names of Seti I, enclosed by snakes and flanked by two rows of hieroglyphics.
+              <br><br>
+              The low reliefs on the walls depict Seti I and Ramses II making offerings to various gods, including, on the right, Hathor of Dendera who is suckling Seti.
+              </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-container1">
+        <div class="float-child1">
+          <img src="assets/images/Luxor/museum2.jpeg" #image8 alt="Luxor Museum" style="border-radius: 25px; width: 90%; margin-top: 80px; margin-left: 30px;" (click) = zoomIn(image8)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child1">
+          <div class="text2">
+            <h1>Luxor Museum</h1>
+            <p>
+              One of Egypt's best museums, Luxor Museum holds a beautifully exhibited collection from the local area, which tells the story of ancient Thebes, from the Old Kingdom right up to the Islamic Period.
+              <br><br>
+              The museum's prize possessions are the two Royal Mummies of Ahmose I and what is believed to be Ramses I in two rooms on the ground floor, which are worth a visit here alone.
+              <br><br>
+              The upper floor has a dazzling display of amulets, silver bowls, grave and tomb furnishings, and votive tablets running across the middle of the floor space.
+              <br><br>
+              While here, check out the reliefs on the re-erected Wall of Akhenaten. The 283 sandstone blocks are covered with painted reliefs and originally belonged to Akhenaten's Temple of the Sun at Karnak.
+              </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>
+      <div class="footerStuff">
+  
+        <div class="footerItem">
+         <a href="https://egymonuments.gov.eg" target="_blank"> Ministry of Tourism Egypt  </a> 
+         |
+         <a style="cursor: text; color: white;"> Zamalek head office 3 El Adel Abou Bakr St., Zamalek , Cairo </a> 
+         |
+         <a href="https://egymonuments.gov.eg" target="_blank"> egymonuments.gov.eg  </a> 
+        </div>
+  
+        <div class="social-icons">
+          <a class="social-icon social-icon--facebook" href="https://www.facebook.com/khaled.wbas.56" target="_blank">
+            <i class="fa fa-facebook"></i>
+            <div class="tooltip">Facebook</div>
+          </a>
+          <a class="social-icon social-icon--twitter" href="https://twitter.com/khaled_garawin" target="_blank">
+            <i class="fa fa-twitter"></i>
+            <div class="tooltip">Twitter</div>
+          </a>
+          <a class="social-icon social-icon--github" href="https://github.com/LoDaAa" target="_blank">
+            <i class="fa fa-github"></i>
+            <div class="tooltip">Github</div>
+          </a>
+          <a class="social-icon social-icon--instagram" href="https://www.instagram.com/khldwleedd/" target="_blank">
+            <i class="fa fa-instagram"></i>
+            <div class="tooltip">Instagram</div>
+          </a>
+          <a class="social-icon social-icon--linkedin" href="https://www.linkedin.com/in/khaled-garaween-557181169/" target="_blank">
+            <i class="fa fa-linkedin"></i>
+            <div class="tooltip">LinkedIn</div>
+          </a>
+        </div>
+        
+      </div>
+  </footer>

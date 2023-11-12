@@ -1,0 +1,277 @@
+<app-header></app-header>
+
+<header>
+  
+    <div class="banner">
+      <div class="container2">
+        <h2 class="text1"> Hurghada </h2>
+      </div>
+      <div class="button">
+        <a class="btn2">
+         Explore Places To Visit In Hurghada
+       </a>
+     </div>
+     </div>
+    
+      <!-- Slider -->
+    
+      <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'" [interval]='3000' style=" width:100% !important; height: 500px !important;">
+        <mdb-carousel-item>
+          <div class="view" style=" width:100% !important; height: 800px !important;">
+          <img class="d-block w-100" src="assets/images/Hurghada/HurghadaBack.jpeg" alt="Second slide">
+          <div class="mask rgba-black-light"></div>
+          </div>
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <div class="view" style=" width:100% !important; height: 800px !important;">
+          <img class="d-block w-100" src="assets/images/Hurghada/HurghadaBack2.jpeg" alt="Third slide">
+          <div class="mask rgba-black-light"></div>
+          </div>
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <div class="view" style=" width:100% !important; height: 800px !important;">
+          <img class="d-block w-100" src="assets/images/Hurghada/HurghadaBack3.jpg" alt="Third slide">
+          <div class="mask rgba-black-light"></div>
+          </div>
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <div class="view" style=" width:100% !important; height: 800px !important;">
+          <img class="d-block w-100" src="assets/images/Hurghada/HurghadaBack4.jpeg" alt="Third slide">
+          <div class="mask rgba-black-light"></div>
+          </div>
+        </mdb-carousel-item>
+       
+      </mdb-carousel>
+    
+    </header>
+
+    <div class="places">
+
+      <h1> <span> Places To Go In Hurghada </span></h1>
+
+      <div class="float-container">
+        <div class="float-child" style="margin-top: 90px;">
+          <img src="assets/images/Hurghada/giftun.jpeg"  #image1 alt="Giftun Islands" style="border-radius: 25px;" (click) = zoomIn(image1)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child" style="margin-top: -50px;">
+          <div class="text">
+            <h1> Giftun Islands </h1>
+            <p>
+              <strong> The Giftun Islands are one of Hurghada's most popular boat excursions</strong> , with prime swaths of white sand to soak up the rays, and snorkeling opportunities galore on offer.
+              <br><br>
+              For those who aren't scuba diving enthusiasts, the easily accessed coral reefs in the area surrounding the island shore are an excellent taster of the Red Sea's beauty.
+              <br><br>
+              During the height of tourism season, when dozens of boats descend on the islands daily, treat a Giftun Islands trip solely as a beach trip, as the crowds scare off any sea life.
+              <br><br>
+              In quieter periods, while paddling close to shore, you could spot colorful fish flitting through the clear water,
+              <br><br>
+              Those not interested in underwater exploits can simply claim a palm-frond shelter on the beach, sit back, and enjoy the sun.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-container1">
+        <div class="float-child1">
+          <img src="assets/images/Hurghada/gubal.jpeg" #image2 alt="Straits of Gubal" style="border-radius: 25px; width: 100%;"(click) = zoomIn(image2)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child1" style="margin-right: 30px; margin-top: 20px;">
+          <div class="text2">
+            <h1> Straits of Gubal </h1>
+            <p>
+              Egypt's Straits of Gubal, a narrow strip of water squeezed between the Red Sea Coast and the Western shore of the <strong> Sinai Peninsula </strong>, is one of the <a> Red Sea's major diving destinations </a> and is easily accessed from Hurghada.
+              <br><br>
+              <strong> This area is known chiefly for its wreck diving and is home to The Thistlegorm  </strong>(a WWII cargo ship rediscovered by French diver Jacques Cousteau), renowned as one of the world's top wreck dive sites.
+              <br><br>
+              Accessed by liveaboard from Hurghada, The Thistlegorm is easily the Straits of Gubal's most popular dive site, but divers who want to explore further will find plenty of other opportunities to dive.
+              <br><br>
+              One of the most rewarding diving areas in the Straits of Gubal is Abu Nuhas, within dive-boat day-trip distance from Hurghada.
+              <br><br>
+              This area around Shadwan Island in the Straits is home to six separate dive sites with several wrecks.
+              <br><br>
+              The main attraction is the wreck of the <strong> Carnatic </strong> , a UK cargo ship sunk in 1869, which is still in incredibly good condition, with its skeletal remains home to flourishing coral and abundant fish life.
+              <br><br>
+              The Greek ship <strong> Chrisoula K </strong> (sunk in 1981) and the German <strong> Kimon M  </strong>(sunk in 1978) are two more popular wreck dives in this area, with plenty of opportunities to spot lionfish, triggerfish, and pipefish among the wreckage.
+              </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-container2">
+        <div class="float-child2">
+          <img src="assets/images/Hurghada/quadBike.jpeg" #image3 alt="Explore the Desert by Jeep or Quad Bike" style="border-radius: 25px; width: 95%; margin-top: 50px;" (click) = zoomIn(image3)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child2" style="margin-top: 70px;">
+          <div class="text2">
+            <h1> Explore the Desert by Jeep or Quad Bike </h1>
+            <p>
+              With so much action happening in the water, some travelers forget that back onshore there's an entire desert world to explore.
+              <br><br>
+              Among Hurghada's most popular on-the-ground things to do are quad biking, jeep expeditions, and dune buggy trips into the sand dune hinterland.
+              <br><br>
+              You don't have to travel very far off-road from the resort town to discover the acacia tree studded wadis (valleys), sandwiched in by red-tinged mountains, that make up most of the landscape of the Eastern Desert.
+              <br><br>
+              A popular way to experience this desert hinterland is on the <a> five-hour quad bike safari in Hurghada </a> , which includes a break at a Bedouin village and a camel ride.
+              </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="float-container1">
+        <div class="float-child1" style="margin-top: 180px !important;">
+          <img src="assets/images/Hurghada/gota.jpeg" #image4 alt="Gota Abu Ramada " style="border-radius: 25px; width: 100%;" (click) = zoomIn(image4)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child1" style="margin-right: 30px;">
+          <div class="text2">
+            <h1> Gota Abu Ramada </h1>
+            <p>
+              Also known as "The Aquarium," Gota Abu Ramada is a dive site with huge amounts of marine life and a coral garden of pinnacles.
+              <br><br>
+              One of the most popular dive sites near Hurghada, it is used by many dive operators as a try-dive site for novice divers. If you're in Hurghada to learn to dive, you will likely be spending some time here.
+              <br><br>
+              For more advanced and experienced divers, the huge variety of sea life is the main attraction.
+              <br><br>
+              Triggerfish, lionfish, and clownfish are always whizzing through the ethereal blue waters here, and many divers also manage to glimpse the resident eagle rays.
+            </p>
+</div>
+        </div>
+      </div>
+
+      <div class="float-container2">
+        <div class="float-child2">
+          <img src="assets/images/Hurghada/snorkling.jpeg" #image5 alt="Snorkeling in Hurghada" style="border-radius: 25px; width: 95%; margin-top: 20px;" (click) = zoomIn(image5)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child2" style="margin-top: 75px;">
+          <div class="text2">
+            <h1> Snorkeling in Hurghada </h1>
+            <p>
+              The best underwater sites of Hurghada's coastline can only be accessed by diving. If diving isn't for you, though, there are still plenty of shallow reefs that can be experienced by snorkeling.
+              <br><br>
+              The area surrounding the Gifton Islands is one of the most popular places to visit for snorkeling.
+              <br><br>
+              Trips such as this <strong> Red Sea snorkeling </strong>  trip stop on the main Gifton Island for swimming and sunbathing before heading on to two nearby reefs for snorkeling. It includes pickup and drop-off from your Hurghada hotel and a full-day boat trip, with lunch. There is plenty of time for relaxation on board as well.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-container1">
+        <div class="float-child1">
+          <img src="assets/images/Hurghada/bedouin.jpeg" #image6 alt="Bedouin Dinner Tours" style="border-radius: 25px; width: 90%; margin-top: 80px; margin-left: 30px;" (click) = zoomIn(image6)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child1">
+          <div class="text2">
+            <h1> Bedouin Dinner Tours </h1>
+            <p>
+              For a night away from the hotel, one of the most popular evening tourist attractions in the Hurghada area are the Bedouin dinner tours offered by many of the resorts.
+              <br><br>
+              For foodie travelers this is a must-do for the chance to sample the wholesome Egyptian dishes that never make it onto restaurant menus.
+              <br><br>
+              Tours, which sometimes include a camel ride, head out into the desert or to nearby Bedouin settlements to feast on flavorful local cooking while reclining on colorful cushions in a traditional Bedouin tent setting.
+              <br><br>
+              It's an atmospheric way to be introduced to Egypt's wonderful array of home-style cooking.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-container2">
+        <div class="float-child2">
+          <img src="assets/images/Hurghada/acquarium.jpeg" #image7 alt="Hurghada Aquarium" style="border-radius: 25px; width: 90%; margin-top: 40px;" (click) = zoomIn(image7)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child2" style="margin-top: 70px;">
+          <div class="text2">
+            <h1> Hurghada Aquarium </h1>
+            <p>
+              If you've been out snorkeling or diving and want to identify what you've seen, then Hurghada Aquarium in the northern part of the central town area (known as Ad-Dahar) can help you out.
+              <br><br>
+              These days, the aquarium is showing its age and could do with an update, but it still has the only decent display of Red Sea marine life in the Hurghada area.
+              <br><br>
+              For non-swimmers, it's also a good chance to see the many different varieties of the Red Sea's abundant fish life up close, though to see them in a natural habitat, you'd be better off buying a ticket for the Sindbad Submarine.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-container1">
+        <div class="float-child1">
+          <img src="assets/images/Hurghada/sindbad.jpeg" #image8 alt="Sindbad Submarine" style="border-radius: 25px; width: 90%; margin-top: 100px; margin-left: 30px;" (click) = zoomIn(image8)>
+          <div id="myModal" class="modal" (click)="zoomOut()">
+            <img class="modal-content" id="img01">
+        </div>
+        </div>
+        <div class="float-child1">
+          <div class="text2">
+            <h1>Sindbad Submarine</h1>
+            <p>
+              Hurghada's Sindbad Submarine offers the opportunity of seeing some of the Red Sea's famed underwater sights without getting your feet wet.
+              <br><br>
+              This tourist submarine is the only one operating in the Red Sea.
+              <br><br>
+              It delves below the Red Sea's surface to a depth of 22 meters, so passengers can glimpse the abundant flitting reef fish that inhabit the reefs of colorful soft corals.
+              <br><br>
+              Submarine trips take about one hour, and although they don't go very far offshore where the better coral reefs can be viewed, for non-swimmers, it provides an opportunity to see the magical world below the sea's surface, which the Red Sea is so renowned for.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>
+      <div class="footerStuff">
+  
+        <div class="footerItem">
+         <a href="https://egymonuments.gov.eg" target="_blank"> Ministry of Tourism Egypt  </a> 
+         |
+         <a style="cursor: text; color: white;"> Zamalek head office 3 El Adel Abou Bakr St., Zamalek , Cairo </a> 
+         |
+         <a href="https://egymonuments.gov.eg" target="_blank"> egymonuments.gov.eg  </a> 
+        </div>
+  
+        <div class="social-icons">
+          <a class="social-icon social-icon--facebook" href="https://www.facebook.com/khaled.wbas.56" target="_blank">
+            <i class="fa fa-facebook"></i>
+            <div class="tooltip">Facebook</div>
+          </a>
+          <a class="social-icon social-icon--twitter" href="https://twitter.com/khaled_garawin" target="_blank">
+            <i class="fa fa-twitter"></i>
+            <div class="tooltip">Twitter</div>
+          </a>
+          <a class="social-icon social-icon--github" href="https://github.com/LoDaAa" target="_blank">
+            <i class="fa fa-github"></i>
+            <div class="tooltip">Github</div>
+          </a>
+          <a class="social-icon social-icon--instagram" href="https://www.instagram.com/khldwleedd/" target="_blank">
+            <i class="fa fa-instagram"></i>
+            <div class="tooltip">Instagram</div>
+          </a>
+          <a class="social-icon social-icon--linkedin" href="https://www.linkedin.com/in/khaled-garaween-557181169/" target="_blank">
+            <i class="fa fa-linkedin"></i>
+            <div class="tooltip">LinkedIn</div>
+          </a>
+        </div>
+        
+      </div>
+  </footer>

@@ -1,0 +1,88 @@
+<div class="container3" id="container" [class.right-panel-active]="isVisible">
+	<div class="form-container sign-up-container">
+		<form action="#" class="LoginForm" #userForm = ngForm (ngSubmit) = "registerUser()">
+			<h1>Create Account</h1>
+			<div class="social-container">
+				<a (click)="facebookLogin()" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a (click)="GoogleLogin()" class="social"><i class="fab fa-google-plus-g"></i></a>
+			</div>
+			<span>or use your email for registration</span>
+            <input [(ngModel)] = "registerData.username" #username = "ngModel" #RefName required 
+            [class.is-invalid] = "username.invalid && username.touched" name = "username" 
+            type="text" class="form-control" placeholder="Name"
+            pattern = "([a-zA-Z]+?)" (input)="change()">
+			<small class="text-danger" *ngIf = "isUsernameUsed">  Username already exists.</small> 
+            <div class="text-danger" *ngIf = "username.errors && username.touched ">
+                <small *ngIf = "username.errors.required" > First Name is required </small>     
+                <small *ngIf = "username.errors.pattern" > Only Alphabets allowed </small>
+               </div>
+               <input [(ngModel)] = "registerData.email" #email = "ngModel" type="email" required name = "email" 
+               class="form-control"  aria-describedby="emailHelp" [class.is-invalid] = "email.invalid && email.touched"
+               id="inputEmail" placeholder="Email" 
+               pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" (input)="change()">
+               <div class="text-danger" *ngIf = "email.errors && email.touched ">
+                <small *ngIf = "email.errors.required" > Email Address is required </small>     
+                <small *ngIf = "email.errors.pattern" > Not A Valid Email Address </small>
+            </div>   
+            <small class="text-danger" *ngIf = "isEmailUsed && !email.errors?.required &&
+                                                !email.errors?.pattern" >  Email is Already in Use. </small> 
+            <input [(ngModel)] = "registerData.password" #password = "ngModel" type="password"  
+                    name = "password"  required [class.is-invalid] = "password.errors?.required && password.touched"
+                    class="form-control" id="inputPass" placeholder="Password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{9,}$">
+                    <small class="text-danger"  *ngIf = "password.errors?.required && password.touched"> Password is required </small>
+                    <small class="text-danger" *ngIf = "password.invalid && password.touched && !password.errors?.required"> The password must be at least 8 long contains at least a character and a number</small> 
+                    
+                    <input [(ngModel)] = "registerData.confirmpassword" #confirmPassword = "ngModel" 
+                    type="password" name = "confirmpassword" required [class.is-invalid] = "confirmPassword.invalid && confirmPassword.touched"
+                    class="form-control" id="inputConfirmPass" placeholder="Confirm Password" pattern="{{ password.value }}"
+					[disabled] = "!password.valid" >
+                    <small class="text-danger" *ngIf="confirmPassword.touched && confirmPassword.errors?.required">Confirm Password is required </small>  
+                    <small class="text-danger" *ngIf="confirmPassword.touched && confirmPassword.invalid && !confirmPassword.errors?.required">Passwords Don't match</small> 
+                      <small class="text-success" *ngIf = "successReg">
+                         Successful Sign Up.
+                      </small>
+					  <button type = "submit" [disabled] = "!userForm.form.valid" >Sign Up</button>
+					</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#" #loginForm = ngForm  class="LoginForm">
+			<h1>Sign in</h1>
+			<div class="social-container">
+				<a (click)="facebookLogin()"  class="social"><i class="fab fa-facebook-f"></i></a>
+				<a (click)="GoogleLogin()"class="social"><i class="fab fa-google-plus-g"></i></a>
+			</div>
+			<span>or use your account</span>
+			<input [(ngModel)] = "loginData.email" type="email" name = "emailLogin" #emailLogin = "ngModel" class="form-control"
+			[class.is-invalid] = "emailLogin.invalid && emailLogin.touched"  
+				required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" placeholder="Email" (input)="changeLogin()">
+			<small class="text-danger"  *ngIf = "emailLogin.errors?.required && emailLogin.touched"> Email is required </small>
+			<small class="text-danger" *ngIf = "emailLogin.errors?.pattern" > Not A Valid Email Address </small>
+			<input [(ngModel)] = "loginData.password" type="password" name = "passwordLogin" #passwordLogin = "ngModel" class="form-control" 
+			[class.is-invalid] = "passwordLogin.invalid && passwordLogin.touched" 
+			required placeholder="Password" (input)="changeLogin()">
+			<small class="text-danger"  *ngIf = "passwordLogin.errors?.required && passwordLogin.touched"> Password is required </small>
+			<div class="text-success" *ngIf = "successLog">
+				Successful Sign In. 
+			</div>
+			<div class="text-danger" *ngIf = "failureLog && !successLog">
+				Incorrect email or password.
+			</div>
+			<a routerLink="/begin_password_reset">Forgot your password?</a>
+			<button (click) = loginUser() [disabled] = "!loginForm.form.valid">Sign In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn" (click)="apply('signIn')">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+			 	<button class="ghost" id="signUp" (click)="apply('signUp')">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>

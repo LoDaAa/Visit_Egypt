@@ -1,0 +1,326 @@
+<app-header></app-header>
+
+
+
+<header>
+  
+<div class="banner">
+  <div class="container2" >
+    <h1 class="text1" data-aos="fade-up">   {{ 'Welcome' | translate }} </h1>
+    <h2 class="text2" data-aos="fade-down"> {{ 'Egypt' | translate }}</h2>
+  </div>
+
+  <div class="button">
+    <a [routerLink]="['/']"  fragment="main" class="btn2">
+     {{ 'journey' | translate }}
+     </a>
+   </div>
+ </div>
+
+
+  <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'" [interval]='3000' style=" width:100% !important; height: 500px !important;">
+    <mdb-carousel-item>
+      <div class="view" style=" width:100% !important; height: 800px !important;">
+      <img class="d-block w-100" src="assets/images/pyramids.jpg" alt="Second slide">
+      <div class="mask rgba-black-light"></div>
+      </div>
+    </mdb-carousel-item>
+    <mdb-carousel-item>
+      <div class="view" style=" width:100% !important; height: 800px !important;">
+      <img class="d-block w-100" src="assets/images/sharm.jpeg" alt="Third slide">
+      <div class="mask rgba-black-light"></div>
+      </div>
+    </mdb-carousel-item>
+    <mdb-carousel-item>
+      <div class="view" style=" width:100% !important; height: 800px !important;">
+      <img class="d-block w-100" src="assets/images/alexan.jpeg" alt="Third slide">
+      <div class="mask rgba-black-light"></div>
+      </div>
+    </mdb-carousel-item>
+    <mdb-carousel-item>
+      <div class="view" style=" width:100% !important; height: 800px !important;">
+      <img class="d-block w-100" src="assets/images/sea.jpeg" alt="Third slide">
+      <div class="mask rgba-black-light"></div>
+      </div>
+    </mdb-carousel-item>
+   
+  </mdb-carousel>
+
+</header>
+
+  <div id="about" class="tabs">
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">{{ 'aboutEgypt' | translate }}</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="history-tab" data-bs-toggle="tab" data-bs-target="#history" type="button" role="tab" aria-controls="history" aria-selected="false">{{ 'history' | translate }}</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="regional-tab" data-bs-toggle="tab" data-bs-target="#regional" type="button" role="tab" aria-controls="regional" aria-selected="false">{{ 'regional' | translate }}</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="info-tab" data-bs-toggle="tab" data-bs-target="#info" type="button" role="tab" aria-controls="info" aria-selected="false">{{ 'info' | translate }}</button>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+      <div class="headerBanner">
+          <span> {{ 'about' | translate }} </span> 
+          <img *ngIf="showEgyptImg" class="headerImg" src="assets/images/IMG_5548-removebg-preview.png" alt="Third slide">
+      </div> 
+
+      <main class="main">
+
+      <section class='leftsection'>
+          <div class="mypost" style="font-size: 20px;">
+            {{ 'aboutEgyptDesc1' | translate }} <br> {{ 'aboutEgyptDesc2' | translate }} <br> {{ 'aboutEgyptDesc3' | translate }}
+          </div>
+        </section>
+                
+      </main>
+
+    </div>
+    <div class="tab-pane fade" id="history" role="tabpanel" aria-labelledby="history-tab">
+
+      <h1 class="headerBanner">
+        <div>
+          <span style="left: 550px;"> {{ 'history' | translate }} </span> 
+        </div>
+      </h1> 
+
+      <div class="main" id="main">
+
+      <section class='leftsection'>
+          <div class="mypost" style="font-size: 20px;">
+            The history of Egypt has been long and wealthy, due to the flow of the Nile River with its fertile banks and delta, as well as the accomplishments of Egypt's native inhabitants and outside influence. Much of Egypt's ancient history was a mystery until Egyptian hieroglyphs were deciphered with the discovery and help of the Rosetta Stone. Among the Seven Wonders of the Ancient World is the Great Pyramid of Giza.
+            
+            Ancient Egyptian civilization coalesced around 3150 BC with the political unification of Upper and Lower Egypt under the first king of the First Dynasty
+          
+          </div>
+        </section>
+                
+      </div>    
+  </div>
+    <div class="tab-pane fade" id="regional" role="tabpanel" aria-labelledby="regional-tab">
+      
+      <h1 class="headerBanner">
+        <div>
+          <span style="left: 400px;"> Regional Divisions </span> 
+        </div>
+      </h1> 
+
+      <div class="main" id="main">
+
+      <section class='leftsection'>
+        <div class="mypost" style="font-size: 20px;">
+          Egypt is divided into 27 governorates and each has a capital and at least one city. Each governorate is administered by a governor, who is appointed by the President of Egypt and serves at the president's discretion. Most governorates have a population density of more than one thousand per km2, while the three largest have a population density of less than two per km2 
+          Egypt is divided, for the purpose of public administration, according to a three-layer hierarchy and some districts are further subdivided, creating an occasional fourth layer.    
+        </div>
+      </section>
+
+      </div>
+
+    </div>
+    <div class="tab-pane fade" id="info" role="tabpanel" aria-labelledby="info-tab"> 
+      
+      <h1 class="headerBanner">
+        <div>
+          <span style="left: 300px;"> Interesting Information </span> 
+        </div>
+      </h1> 
+
+      <div class="main" id="main">
+
+      <section class='leftsection'>
+        <div class="mypost" style="font-size: 20px;">
+          1. The Egyptians invented the 365-days a year calendar. <br>
+          2. World’s oldest dress was found here. 5000 years old. <br>
+          3. The Great Pyramids was not built by slaves. <br>
+          4. Greater Cairo is the largest city in Africa and the Middle East.<br>
+          6. The most popular sport in Egypt is football.
+        </div>
+      </section>
+
+      </div>
+    
+   </div>
+  </div>
+  <section class='rightsection'>
+    <video poster="assets/images/poster2.png" #videoPlayer>
+      <source src='assets/images/Egypt.mp4' type="video/mp4">
+      Your browser does not support HTML video.
+    </video>
+    <div class="play-icon-box" (click)="toggleVideo()" [ngStyle]="{'box-shadow': variable ? 'none' : 'transparent', 'background-color': variable ? 'transparent' : 'white', 'width': variable ? '600px' : '100px', 'height': variable ? '600px' : '100px', 'left': variable ? '30px' : '300px', 'top': variable ? '-455px' : '-180px'}">
+      <img [title]="play" [src]="videoIcon" alt="">
+    </div>
+  </section>
+</div>
+
+<section class="pics">
+      <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+              <a routerLink = "food">
+                <div class="image">
+               <!--    <img src="https://www.tripsinegypt.com/images/2018/12/Egyptian-Food-Trips-in-Egypt.jpg" />  --> 
+               <img src="https://media.istockphoto.com/id/1490753206/photo/oriental-egyptian-dishes-top-view.jpg?s=612x612&w=0&k=20&c=LdmBDRm5X2pvO2JOnteKVKBM2gRHReViRtoozGLSZxk="/>
+                   <div class="middle">
+                      <div class="text">Food</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+        </div>
+      </div>
+</section>
+
+      <div class="headTitle">
+        <h1> {{ 'travel' | translate }} </h1>
+        <hr>
+        <span> {{ 'necessary' | translate }} </span>
+      </div>
+
+      <section class="tripItems">
+          
+        <div class="container">
+          <div class="row">
+              <div class="col-md-4">
+                <li class="health" type="button" (click)="goToKeyInfoPage()">
+                  <i class="fas fa-hospital-symbol fa-2x"></i>
+                  <span> {{ 'health' | translate }} </span>
+                  </li>
+                  <hr>
+              </div>
+              <div class="col-md-4">
+                <li class="safety" type="button" (click)="goToKeyInfoPage()">
+                  <i class="fas fa-lock fa-2x"></i>
+                  <span> {{ 'safety' | translate }} </span>
+                </li>
+                <hr>
+              </div>
+              <div class="col-md-4">
+                <li class="visa" type="button" (click)="goToKeyInfoPage()">
+                  <i class="fas fa-book fa-2x"></i>
+                  <span> {{ 'visa' | translate }} </span>
+                </li>
+                <hr>
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <li class="emergency" type="button" (click)="goToKeyInfoPage()">
+                <i class="fas fa-phone fa-2x"></i>
+                <span> {{ 'numbers' | translate }} </span>
+              </li>
+              <hr>
+            </div>
+            <div class="col-md-4">
+              <li class="power" type="button" (click)="goToKeyInfoPage()">
+                <i class="fas fa-bolt fa-2x"></i>
+                <span> {{ 'power' | translate }}</span>
+              </li>
+              <hr>
+            </div>
+            <div class="col-md-4">
+              <li class="weather" type="button" (click)="goToKeyInfoPage()">
+                <i class="fas fa-cloud-sun fa-2x"></i>
+                <span> {{ 'weather' | translate }}</span>
+              </li>
+              <hr>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <li class="telecommuncations" type="button" (click)="goToKeyInfoPage()">
+              <i class="fas fa-mobile-alt fa-2x"></i>
+              <span> {{ 'telecom' | translate }} </span>
+            </li>
+            <hr>
+          </div>
+          <div class="col-md-4">
+            <li class="language" type="button" (click)="goToKeyInfoPage()">
+              <i class="fas fa-language fa-2x"></i>
+              <span> {{ 'language' | translate }} </span>
+            </li>
+            <hr>
+          </div>
+          <div class="col-md-4">
+            <li class="currency" type="button" (click)="goToKeyInfoPage()">
+              <i class="fas fa-coins fa-2x"></i>
+              <span> {{ 'currency' | translate }} </span>
+            </li>
+            <hr>
+          </div>
+      </div>
+    </div>
+
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                  <a href="aboutEgypt">
+                    <img src="assets/images/footerLogo.png" alt="" style="width: 150px; margin-left: 90px;">
+                  </a>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li><a href="">Product</a></li>
+                                <li><a href="">Benefits</a></li>
+                                <li><a href="">Partners</a></li>
+                                <li><a href="">Team</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li><a href="">Documentation</a></li>
+                                <li><a href="">Support</a></li>
+                                <li><a href="">Legal Terms</a></li>
+                                <li><a href="">About</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="nav">
+                        <li class="nav-item"><a href="https://www.facebook.com/khaled.wbas.56" target="_blank" class="nav-link pl-0"><i class="fa fa-facebook fa-lg"></i></a></li>
+                        <li class="nav-item"><a href="https://twitter.com/khaled_garawin" target="_blank" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
+                        <li class="nav-item"><a href="https://github.com/LoDaAa" target="_blank" class="nav-link"><i class="fa fa-github fa-lg"></i></a></li>
+                        <li class="nav-item"><a href="https://www.instagram.com/khldwleedd/" target="_blank" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></li>
+                    </ul>
+                    <br>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="text-md-right"> {{ 'contactUs' | translate }}</h5>
+                </div>
+                <div class="col-md-5">
+                    <form>
+                        <fieldset class="form-group">
+                            <input *ngIf = "!_authService.getAccessToken()" type="email" class="form-control" name="userEmail" [(ngModel)] = "UserData.userEmail" id="exampleInputEmail1" placeholder="{{ 'email' | translate }}">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <textarea class="form-control" id="exampleMessage" name="message" [(ngModel)] = "UserData.message" placeholder="{{ 'message' | translate }}"></textarea>
+                        </fieldset>
+                        <p class="text-success" *ngIf="isSuccess"> Your Message has been sent successfully </p>
+                        <fieldset class="form-group text-xs-right" *ngIf = "_authService.getAccessToken()">
+                          <button type="button" class="btn btn-secondary-outline btn-lg" (click)="SendMessage()" [disabled]="UserData.message == ''">{{ 'send' | translate }}</button>
+                      </fieldset>
+                      <fieldset class="form-group text-xs-right" *ngIf = "!_authService.getAccessToken()">
+                            <button type="button" class="btn btn-secondary-outline btn-lg" (click)="SendMessage()" [disabled]="UserData.userEmail == '' || UserData.message == ''">{{ 'send' | translate }}</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div mdbModal #frame="mdbModal" class="modal fade" id="frameModalTop" tabindex="-1" role="dialog"
+    aria-labelledby="myModalLabel" aria-hidden="true">
+ <div class="modal-dialog" role="document" *ngIf="isLoginFrame">
+   <div class="modal-content">
+     <app-login [frame]="frame"> </app-login>
+   </div>
+ </div>
+ </div>
