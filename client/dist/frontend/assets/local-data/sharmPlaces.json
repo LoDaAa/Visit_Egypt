@@ -1,0 +1,50 @@
+{
+    "sharmplaces" : [
+        {
+            "placeId": 1,
+            "title": "Ras Mohammed National Park",
+            "imageUrl": "assets/images/Sharm/rasMohamed.jpeg"
+        },
+        {
+            "placeId": 2,
+            "title": "Thistlegorm Wreck",
+            "imageUrl": "assets/images/Sharm/shipwreck.jpeg",
+            "param" : "thistlegormWreck"
+        },
+        {
+            "placeId": 3,
+            "title": "Jolanda Reef Site",
+            "imageUrl": "assets/images/Sharm/jolanda.jpeg"
+        },
+        {
+            "placeId": 4,
+            "title": "Saint Catherine's Monastery",
+            "imageUrl": "assets/images/Sharm/saint.jpeg" 
+        },
+        {
+            "placeId": 5,
+            "title": "Climb Mt. Sinai",
+            "imageUrl": "assets/images/Sharm/sinai.jpeg"
+        },
+        {
+            "placeId": 6,
+            "title": "Dunraven Site",
+            "imageUrl": "assets/images/Sharm/dunraven.jpeg"
+        },
+        {
+            "placeId": 7,
+            "title": "Colored Canyon",
+            "imageUrl": "assets/images/Sharm/canyon.jpeg"
+        },
+        {
+            "placeId": 8,
+            "title": "The Blue Hole",
+            "imageUrl": "assets/images/Sharm/blueHole.png"
+        },
+        {
+            "placeId": 9,
+            "title": "Day Trip to Dahab",
+            "imageUrl": "assets/images/Sharm/dahab.jpeg"
+        }
+    ]
+}

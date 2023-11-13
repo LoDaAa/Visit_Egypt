@@ -1,0 +1,52 @@
+{
+    "hurghadaplaces" : [
+        {
+            "placeId": 1,
+            "title": "Giftun Islands",
+            "imageUrl": "assets/images/Hurghada/giftun.jpeg",
+            "param" : "giftunIsland"
+        },
+        {
+            "placeId": 2,
+            "title": "Straits of Gubal",
+            "imageUrl": "assets/images/Hurghada/gubal.jpeg",
+            "param" : "straitsOfGubal"
+        },
+        {
+            "placeId": 3,
+            "title": "Explore the Desert by Jeep or Quad Bike",
+            "imageUrl": "assets/images/Hurghada/quadBike.jpeg"
+        },
+        {
+            "placeId": 4,
+            "title": "Gota Abu Ramada",
+            "imageUrl": "assets/images/Hurghada/gota.jpeg" 
+        },
+        {
+            "placeId": 5,
+            "title": "Snorkeling in Hurghada",
+            "imageUrl": "assets/images/Hurghada/snorkling.jpeg"
+        },
+        {
+            "placeId": 6,
+            "title": "Bedouin Dinner Tours",
+            "imageUrl": "assets/images/Hurghada/bedouin.jpeg"
+        },
+        {
+            "placeId": 7,
+            "title": "Hurghada Aquarium<",
+            "imageUrl": "assets/images/Hurghada/acquarium.jpeg" 
+        },
+        {
+            "placeId": 8,
+            "title": "Sindbad Submarine",
+            "imageUrl":"assets/images/Hurghada/sindbad.jpeg",
+            "param" : "sindbadSubmarine"
+        },
+        {
+            "placeId": 9,
+            "title": "Dine at Hurghada Marina",
+            "imageUrl": "assets/images/Hurghada/marina.jpeg" 
+        }
+    ]
+}

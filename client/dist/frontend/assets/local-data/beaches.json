@@ -1,0 +1,35 @@
+{
+    "beaches" : [
+        {
+            "placeId": 1,
+            "title": "Naama Bay",
+            "imageUrl": "assets/images/Beaches/naamaBay.jpeg"
+        },
+        {
+            "placeId": 2,
+            "title": "Dahab Lagoon",
+            "imageUrl": "assets/images/Beaches/dahab.jpeg"
+        },
+        {
+            "placeId": 3,
+            "title": "El Gouna",
+            "imageUrl": "assets/images/Beaches/elGouna.jpeg",
+            "param" : "el-Gouna"
+        },
+        {
+            "placeId": 4,
+            "title": "Marsa Alam",
+            "imageUrl": "assets/images/Beaches/marsaAlam.jpeg"
+        },
+        {
+            "placeId": 5,
+            "title": "Soma Bay",
+            "imageUrl": "assets/images/Beaches/somaBay.jpeg"
+        },
+        {
+            "placeId": 6,
+            "title": "Mamoura Beach",
+            "imageUrl": "assets/images/Beaches/Mamoura.jpeg"
+        }
+    ]
+}

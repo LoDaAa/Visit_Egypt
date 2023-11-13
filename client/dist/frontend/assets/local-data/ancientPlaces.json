@@ -1,0 +1,35 @@
+{
+    "ancientplaces" : [
+        {
+            "placeId": 1,
+            "title": "Memphis City",
+            "imageUrl": "assets/images/Ancient/memphis.jpeg"
+        },
+        {
+            "placeId": 2,
+            "title": "Thebes City",
+            "imageUrl": "assets/images/Ancient/thebes.jpeg",
+            "param" : "thebesCity"
+        },
+        {
+            "placeId": 3,
+            "title": "Amarna City",
+            "imageUrl": "assets/images/Ancient/amarna.jpeg"
+        },
+        {
+            "placeId": 4,
+            "title": "Avaris City",
+            "imageUrl": "assets/images/Ancient/avaris.jpeg" 
+        },
+        {
+            "placeId": 5,
+            "title": "Thonis City",
+            "imageUrl": "assets/images/Ancient/thonis.jpeg"
+        },
+        {
+            "placeId": 6,
+            "title": "Abydos City",
+            "imageUrl": "assets/images/Ancient/abydos.jpeg"
+        }
+    ]
+}
